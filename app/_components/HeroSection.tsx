@@ -1,4 +1,4 @@
-import { ChevronRight, Download } from "lucide-react";
+import { ChevronRight, Download, Linkedin, Mail } from "lucide-react";
 import ShinyButton from "./ui/ShinyButton";
 import Link from "next/link";
 import { TextGenerateEffect } from "./ui/TextGenerate";
@@ -19,10 +19,6 @@ const HeroSection = () => {
           <p className="uppercase font-bold text-sm tracking-widest">
             Based In California 
           </p>
-          {/* <h1 className="text-[40px] md:text-6xl lg:text-7xl font-bold text-center max-w-5xl leading-tight tracking-wide">
-            Quality Design &{" "}
-            <span className="text-primary">Web Development</span> Synergy
-          </h1> */}
           <TextGenerateEffect
             words="Hi this is Thomas 👋"
             className="text-[40px] md:text-6xl lg:text-7xl font-bold text-center max-w-5xl leading-snug tracking-wide"
@@ -43,6 +39,27 @@ const HeroSection = () => {
               <span className="group-hover:text-white/70 transition-colors duration-200 font-semibold">
                 Download Resume
               </span>
+            </a>
+          </div>
+          
+          {/* Social Links */}
+          <div className="flex items-center gap-6 mt-8">
+            <a
+              href="https://www.linkedin.com/in/thomasnguyen0712/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-dark-200 dark:text-stone-200 hover:text-primary transition-colors duration-200"
+            >
+              <Linkedin size={24} />
+            </a>
+            <a href="https://github.com/ThomasN0712" target="_blank" rel="noopener noreferrer">
+              <img src="imgs/logos/github-logo.svg" alt="GitHub" className="w-6 h-6" /> 
+            </a>
+            <a
+              href="mailto:thomasnguyen0712@gmail.com" 
+              className="text-dark-200 dark:text-stone-200 hover:text-primary transition-colors duration-200"
+            >
+              <Mail size={24} />
             </a>
           </div>
         </div>

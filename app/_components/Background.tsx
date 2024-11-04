@@ -43,7 +43,7 @@ const Background = () => {
       </div>
 
       <div className="relative">
-        <div className="absolute left-7 top-0 bottom-0 w-px bg-gray-300"></div> {/* Timeline line */}
+        <div className="absolute left-8 top-0 bottom-0 w-px bg-gray-300"></div> {/* Timeline line */}
         <div className="ml-12 space-y-8">
           {activeTab === "Work" &&
             experienceData.map((experience) => (

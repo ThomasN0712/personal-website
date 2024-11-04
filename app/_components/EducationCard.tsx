@@ -15,8 +15,10 @@ const EducationCard: React.FC<EducationCardProps> = ({ education }) => (
     className="flex items-start space-x-4"
   >
     {/* Timeline circle with logo */}
-    <div className="relative w-10 h-10 bg-gray-800 rounded-full overflow-hidden mt-2 -ml-10 flex-shrink-0">
-      <Image src={education.logo} alt={`${education.institution} logo`} layout="fill" objectFit="cover" />
+    <div className="relative w-12 h-12 bg-white rounded-full overflow-hidden mt-2 -ml-10 flex-shrink-0 p-1">
+        <div className="relative w-full h-full">
+            <Image src={education.logo} alt={`${education.institution} logo`} layout="fill" objectFit="contain" />
+        </div>
     </div>
 
     {/* Education box */}
