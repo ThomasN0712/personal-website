@@ -27,7 +27,7 @@ const Background = () => {
         <button
           onClick={() => setActiveTab("Work")}
           className={`py-2 px-4 rounded-lg font-semibold ${
-            activeTab === "Work" ? "bg-gray-800 text-white" : "bg-gray-300 text-black"
+            activeTab === "Work" ?  "bg-gray-300 text-black" : "bg-gray-800 text-white"
           }`}
         >
           Work
@@ -35,7 +35,7 @@ const Background = () => {
         <button
           onClick={() => setActiveTab("Education")}
           className={`py-2 px-4 rounded-lg font-semibold ${
-            activeTab === "Education" ? "bg-gray-800 text-white" : "bg-gray-300 text-black"
+            activeTab === "Education" ? "bg-gray-300 text-black" : "bg-gray-800 text-white" 
           }`}
         >
           Education
@@ -43,7 +43,7 @@ const Background = () => {
       </div>
 
       <div className="relative">
-        <div className="absolute left-6 top-0 bottom-0 w-px bg-gray-300"></div> {/* Timeline line */}
+        <div className="absolute left-7 top-0 bottom-0 w-px bg-gray-300"></div> {/* Timeline line */}
         <div className="ml-12 space-y-8">
           {activeTab === "Work" &&
             experienceData.map((experience) => (

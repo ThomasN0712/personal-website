@@ -1,6 +1,6 @@
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { Education } from "@/app/_lib/constants";
+import Image from "next/image";
 
 interface EducationCardProps {
   education: Education;
@@ -14,18 +14,17 @@ const EducationCard: React.FC<EducationCardProps> = ({ education }) => (
     transition={{ duration: 0.3 }}
     className="flex items-start space-x-4"
   >
-    {/* Timeline circle */}
-    <div className="relative w-4 h-4 bg-gray-800 rounded-full mt-2.5 -ml-10"></div>
+    {/* Timeline circle with logo */}
+    <div className="relative w-10 h-10 bg-gray-800 rounded-full overflow-hidden mt-2 -ml-10 flex-shrink-0">
+      <Image src={education.logo} alt={`${education.institution} logo`} layout="fill" objectFit="cover" />
+    </div>
 
     {/* Education box */}
     <div className="bg-gray-100 dark:bg-gray-800 rounded-lg shadow-md p-4 w-full">
-      <div className="flex items-center space-x-3">
-        <Image src={education.logo} alt={`${education.institution} logo`} width={40} height={40} className="rounded" />
-        <div>
-          <h3 className="text-lg font-bold">{education.institution}</h3>
-          <p className="text-sm text-gray-500">{education.dates}</p>
-          <p className="text-sm font-semibold">{education.degree}</p>
-        </div>
+      <div>
+        <h3 className="text-lg font-bold">{education.institution}</h3>
+        <p className="text-sm text-gray-500">{education.dates}</p>
+        <p className="text-sm font-semibold">{education.degree}</p>
       </div>
       <ul className="list-disc ml-8 mt-2 space-y-1 text-gray-700 dark:text-gray-300">
         {education.description.map((item, index) => (

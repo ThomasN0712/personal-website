@@ -23,33 +23,107 @@ export const experienceData: Experience[] = [
   {
     id: 1,
     company: "Cal State Long Beach",
-    logo: "/imgs/logos/csulb-logo.png",
+    logo: "/imgs/logos/csulb-logo.svg",
     position: "Research Assistant",
     dates: "Jul 2023 - Present",
     description: [
-      "Developed the Java backend for a bank account servicing process with multiple channel integrations using Activiti workflow",
-      "Built a custom database migration tool using Python and MariaDB and facilitated the migration of 1000+ processes from a vendor platform",
+      "Conducted research on data structures and algorithms to optimize performance in large datasets.",
+      "Collaborated with professors to develop new approaches for database indexing and querying.",
     ],
   },
-  // Add more experiences as needed
+  {
+    id: 2,
+    company: "Tech Solutions Inc.",
+    logo: "/imgs/logos/tech-solutions-logo.svg",
+    position: "Software Engineer",
+    dates: "Jan 2022 - Jun 2023",
+    description: [
+      "Developed a RESTful API for managing client data using Node.js and Express.",
+      "Improved application performance by 30% through code optimization and refactoring.",
+      "Led a small team in migrating a legacy system to a modern cloud infrastructure using AWS.",
+    ],
+  },
+  {
+    id: 3,
+    company: "Innovative Labs",
+    logo: "/imgs/logos/innovative-labs-logo.svg",
+    position: "Frontend Developer",
+    dates: "Jun 2021 - Dec 2021",
+    description: [
+      "Built responsive and interactive UI components using React and TypeScript.",
+      "Integrated third-party APIs to enhance user experience and data accessibility.",
+      "Collaborated with UX designers to improve user flows and create a cohesive design system.",
+    ],
+  },
+  {
+    id: 4,
+    company: "Global Solutions",
+    logo: "/imgs/logos/global-solutions-logo.svg",
+    position: "Intern - Data Analyst",
+    dates: "May 2020 - Aug 2020",
+    description: [
+      "Assisted in cleaning and processing large datasets for data analysis projects.",
+      "Created visualizations using Python and Tableau to represent key insights.",
+      "Prepared reports summarizing data trends for stakeholders and decision-makers.",
+    ],
+  },
 ];
+
 
 export const educationData: Education[] = [
   {
     id: 1,
     institution: "Digipen Institute of Technology Singapore",
-    logo: "/path/to/digipen-logo.png",
+    logo: "/imgs/logos/digipen-logo.svg",
     degree: "BS in Computer Science in Real-Time Interactive Simulation",
     dates: "Sep 2019 - Apr 2023",
     description: [
-      "Graduated with a Minor in Mathematics",
-      "President of Digipen Student Management Committee for freshman year",
-      "3-time recipient of the Dean's Honor List",
+      "Graduated with a Minor in Mathematics.",
+      "President of Digipen Student Management Committee for freshman year.",
+      "3-time recipient of the Dean's Honor List.",
     ],
     tags: ["Final Year Project", "2nd Year Project"],
   },
-  // Add more entries as needed
+  {
+    id: 2,
+    institution: "University of California, Berkeley",
+    logo: "/imgs/logos/ucb-logo.svg",
+    degree: "MS in Artificial Intelligence",
+    dates: "Aug 2023 - Present",
+    description: [
+      "Conducting research on neural network optimization.",
+      "Member of the Artificial Intelligence Student Association.",
+      "Completed coursework in machine learning, deep learning, and data visualization.",
+    ],
+    tags: ["Research Project", "AI Club"],
+  },
+  {
+    id: 3,
+    institution: "Stanford University",
+    logo: "/imgs/logos/stanford-logo.svg",
+    degree: "Graduate Certificate in Data Science",
+    dates: "Jan 2022 - Dec 2022",
+    description: [
+      "Specialized in data analysis and machine learning techniques.",
+      "Completed a capstone project on predictive modeling in Python.",
+    ],
+    tags: ["Capstone Project"],
+  },
+  {
+    id: 4,
+    institution: "California State University, Long Beach",
+    logo: "/imgs/logos/csulb-logo.svg",
+    degree: "Bachelor of Science in Computer Engineering",
+    dates: "Aug 2015 - May 2019",
+    description: [
+      "Graduated with honors, maintaining a GPA of 3.8.",
+      "Actively involved in the Computer Engineering Club.",
+      "Completed a senior design project on autonomous vehicles.",
+    ],
+    tags: ["Dean's List", "Senior Design Project"],
+  },
 ];
+
 
 
 export const techCardsItems = [
