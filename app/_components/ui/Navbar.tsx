@@ -8,7 +8,7 @@ import {
 } from "framer-motion";
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import { Sun, Moon } from "lucide-react";
+import { DarkModeToggle } from "./DarkModeToggle"; // Import the toggle component
 
 export const Navbar = ({
   navItems,
@@ -92,7 +92,7 @@ export const Navbar = ({
               <span className="block sm:hidden text-neutral-50 hover:text-primary transition-colors duration-200">
                 {navItem.icon}
               </span>
-              <span className="hidden sm:block font-medium relative">
+              <span className="hidden sm:block font-medium relative dark: text-white">
                 {navItem.name}
                 {/* Render underline only for the active link */}
                 {activeIndex === idx && (
@@ -108,13 +108,8 @@ export const Navbar = ({
             </Link>
           ))}
 
-          {/* Dark/Light Theme Toggle */}
-          <button
-            onClick={() => setDarkMode(!darkMode)}
-            className="text-neutral-50 hover:text-primary transition duration-200"
-          >
-            {darkMode ? <Sun size={24} /> : <Moon size={24} />}
-          </button>
+         {/* Dark Mode Toggle Button */}
+         <DarkModeToggle />
         </motion.div>
       )}
     </AnimatePresence>

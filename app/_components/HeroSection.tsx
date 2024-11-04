@@ -53,8 +53,12 @@ const HeroSection = () => {
               <Linkedin size={24} />
             </a>
             <a href="https://github.com/ThomasN0712" target="_blank" rel="noopener noreferrer">
-              <img src="imgs/logos/github-logo.svg" alt="GitHub" className="w-6 h-6" /> 
-            </a>
+              <img
+                src="imgs/logos/github-logo.svg"
+                alt="GitHub"
+                className="w-6 h-6 dark:invert"
+              />
+            </a>  
             <a
               href="mailto:thomasnguyen0712@gmail.com" 
               className="text-dark-200 dark:text-stone-200 hover:text-primary transition-colors duration-200"
