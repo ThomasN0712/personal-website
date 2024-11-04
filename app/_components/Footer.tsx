@@ -48,6 +48,11 @@ const Footer = () => {
                   Github
                 </Link>
               </li>
+              <li className="text-dark-200/60 hover:text-dark-200 dark:text-white/50 dark:hover:text-white">
+                <Link href="mailto:thomasnguyen0712@gmail.com" target="_blank">
+                  Mail
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
