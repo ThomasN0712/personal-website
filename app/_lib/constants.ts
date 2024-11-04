@@ -1,140 +1,84 @@
-import { useState } from "react";
-import Footer from "@/app/_components/Footer";
-import ProjectTechnologiesMini from "@/app/_components/ProjectTechnologiesMini";
-import { Navbar } from "@/app/_components/ui/Navbar";
-import ShinyButton from "@/app/_components/ui/ShinyButton";
-import { portfolioProjects } from "@/app/_lib/constants";
-import {
-  BriefcaseBusiness,
-  Code,
-  ContactIcon,
-  Globe,
-  House,
-  MoveDown,
-  UserRound,
-} from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
-import { notFound } from "next/navigation";
-
-export function generateMetadata({ params }) {
-  const projectId = params.projectName;
-  const project = portfolioProjects.find((project) => project.id === projectId);
-
-  if (!project) return { title: "Not Found" };
-
-  return {
-    title: `Project ${project.heading}`,
-  };
-}
-
-const navItems = [
-  { name: "Home", link: "/", icon: <House /> },
-  { name: "Work", link: "/#work", icon: <BriefcaseBusiness /> },
-  { name: "About", link: "/#about", icon: <UserRound /> },
-  { name: "Contact", link: "/#contact", icon: <ContactIcon /> },
+export const techCardsItems = [
+  {
+    name: "Python",
+    description: "Programming Language",
+    imageUrl: "/imgs/logos/python.svg",
+    bgColor: "bg-[#3776AB]/20",
+  },
+  {
+    name: "C++",
+    description: "Programming Language",
+    imageUrl: "/imgs/logos/cpp.svg",
+    bgColor: "bg-[#00599C]/20",
+  },
+  {
+    name: "Java",
+    description: "Programming Language",
+    imageUrl: "/imgs/logos/java.svg",
+    bgColor: "bg-[#00599C]/20",
+  },
+  {
+    name: "React",
+    description: "JavaScript Library",
+    imageUrl: "/imgs/logos/react.svg",
+    bgColor: "bg-[#61DAFB]/20",
+  },
+  {
+    name: "TypeScript",
+    description: "JavaScript but better",
+    imageUrl: "/imgs/logos/typescript.svg",
+    bgColor: "bg-[#3178C6]/20",
+  },
+  {
+    name: "Git",
+    description: "Version control",
+    imageUrl: "/imgs/logos/git.svg",
+    bgColor: "bg-[#F1502F]/20",
+  },
+  {
+    name: "ChatGPT",
+    description: "AI Model",
+    imageUrl: "/imgs/logos/chatgpt.svg",
+    bgColor: "bg-[#00A67E]/20",
+  },
+  {
+    name: "Figma",
+    description: "Design Tool",
+    imageUrl: "/imgs/logos/figma-logo.svg",
+    bgColor: "bg-[#0ACF83]/20",
+  },
 ];
 
-const ProjectOverview = ({ params }) => {
-  const projectId = params.projectName;
-  const project = portfolioProjects.find((project) => project.id === projectId);
+export const portfolioProjects = [
+  {
+    id: "wraith",
+    heading: "Project Wraith",
+    subheading: "a snap-chat clone + E2EE",
+    description:
+      "A responsive, high-performance web application built with a modern tech stack. The frontend, developed using React, Vite, and styled with SCSS, provides an interactive and visually appealing user experience. The backend is powered by Golang, MongoDB, and Redis, ensuring efficient data management and fast server-side processing. With Ionic and Capacitor, the app offers seamless functionality across web and mobile platforms.",
+    imageUrl: "/imgs/projects/portfolio-mockup2.png",
+    techStack: [
+      "React",
+      "Golang",
+      "Vite",
+      "Ionic",
+      "Capacitor",
+      "MongoDB",
+      "Redis",
+      "SCSS"
+    ],
+    liveDemoUrl: "not-found",
+    sourceCodeUrl: "not-found",
+  }
+];
 
-  if (!project) return notFound();
-
-  const {
-    heading,
-    subheading,
-    description,
-    imageUrl,
-    techStack,
-    liveDemoUrl,
-    sourceCodeUrl,
-  } = project;
-
-  const [showPopup, setShowPopup] = useState(false);
-  const handleButtonClick = (url) => {
-    if (!url) {
-      setShowPopup(true);
-    } else {
-      window.open(url, "_blank");
-    }
-  };
-
-  return (
-    <main className="flex flex-col px-5 sm:px-10 relative">
-      <div className="max-w-7xl mx-auto w-full">
-        <Navbar navItems={navItems} />
-
-        <div className="pt-36">
-          <div className="h-screen w-full dark:bg-dark-100 bg-white dark:bg-grid-white/[0.04] bg-grid-black/[0.06] absolute top-0 left-0 flex items-center justify-center">
-            <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-dark-100 bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
-          </div>
-
-          <div className="relative z-10">
-            <h1 className="text-[40px] md:text-6xl lg:text-7xl text-center max-w-5xl leading-normal tracking-wide uppercase mx-auto">
-              <span className="font-black">{heading}</span>
-              <br />
-              {subheading}
-            </h1>
-
-            <div className="flex items-center justify-center my-24">
-              <Link href="#image">
-                <MoveDown className="size-16" strokeWidth={1} />
-              </Link>
-            </div>
-
-            <div className="rounded-lg overflow-hidden" id="image">
-              <Image
-                src={imageUrl}
-                width={2000}
-                height={1000}
-                alt="portfolio"
-              />
-            </div>
-
-            <div className="mt-8 mb-32 flex flex-col md:flex-row gap-10 md:gap-5 justify-between">
-              <div className="flex-1">
-                <h2 className="text-3xl min-[430px]:text-4xl md:text-5xl dark:text-stone-200 mb-5">
-                  Project Overview
-                </h2>
-
-                <ProjectTechnologiesMini techStack={techStack} />
-
-                <div className="flex items-center gap-4 mt-10">
-                  <ShinyButton icon={<Globe />} iconPosition="left" onClick={() => handleButtonClick(liveDemoUrl)}>
-                    View Demo
-                  </ShinyButton>
-
-                  <ShinyButton icon={<Code />} iconPosition="left" onClick={() => handleButtonClick(sourceCodeUrl)}>
-                    Source Code
-                  </ShinyButton>
-                </div>
-              </div>
-
-              <p className="flex-1">{description}</p>
-            </div>
-          </div>
-        </div>
-
-        <Footer />
-
-        {showPopup && (
-          <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-            <div className="bg-white dark:bg-dark-200 p-6 rounded-lg max-w-sm w-full text-center">
-              <h3 className="text-xl font-semibold mb-4">Unavailable</h3>
-              <p>The project is not ready for demo or public access.</p>
-              <button
-                className="mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
-                onClick={() => setShowPopup(false)}
-              >
-                Close
-              </button>
-            </div>
-          </div>
-        )}
-      </div>
-    </main>
-  );
-};
-
-export default ProjectOverview;
+export const testimonialItems = [
+  {
+    id: 1,
+    name: "Dr. Hossein Sayadi",
+    proffesion: "Professor at Cal State Long Beach",
+    description:
+      "“Lorem ipsum odor amet, consectetuer adipiscing elit. Habitasse nullam nullam mauris hendrerit viverra donec parturient fames? Habitasse neque nec viverra lobortis tincidunt morbi. Pulvinar ligula euismod tempus lacinia habitasse ligula platea etiam. Tempor imperdiet bibendum inceptos pellentesque luctus per mi blandit. Congue potenti fusce praesent, erat a habitant erat eget. Tempor pretium malesuada nibh habitant finibus sollicitudin primis. Luctus litora accumsan venenatis nisi et egestas.”",
+    image: "/imgs/avatars/Alex.jpg",
+  },
+];

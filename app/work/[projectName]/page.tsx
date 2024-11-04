@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Footer from "@/app/_components/Footer";
 import ProjectTechnologiesMini from "@/app/_components/ProjectTechnologiesMini";
 import { Navbar } from "@/app/_components/ui/Navbar";
@@ -17,9 +16,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
-export function generateMetadata({ params }) {
+export function generateMetadata({
+  params,
+}: {
+  params: { projectName: string };
+}) {
   const projectId = params.projectName;
-  const project = portfolioProjects.find((project) => project.id === projectId);
+  const project = portfolioProjects.find(
+    (project) => project.id === projectId
+  );
 
   if (!project) return { title: "Not Found" };
 
@@ -35,9 +40,15 @@ const navItems = [
   { name: "Contact", link: "/#contact", icon: <ContactIcon /> },
 ];
 
-const ProjectOverview = ({ params }) => {
+const ProjectOverview = ({
+  params,
+}: {
+  params: { projectName: string };
+}) => {
   const projectId = params.projectName;
-  const project = portfolioProjects.find((project) => project.id === projectId);
+  const project = portfolioProjects.find(
+    (project) => project.id === projectId
+  );
 
   if (!project) return notFound();
 
@@ -51,14 +62,10 @@ const ProjectOverview = ({ params }) => {
     sourceCodeUrl,
   } = project;
 
-  const [showPopup, setShowPopup] = useState(false);
-  const handleButtonClick = (url) => {
-    if (!url) {
-      setShowPopup(true);
-    } else {
-      window.open(url, "_blank");
-    }
-  };
+  // Adjust the URLs if they are "not-found"
+  const adjustedLiveDemoUrl = liveDemoUrl === "not-found" ? "/404" : liveDemoUrl;
+  const adjustedSourceCodeUrl =
+    sourceCodeUrl === "not-found" ? "/404" : sourceCodeUrl;
 
   return (
     <main className="flex flex-col px-5 sm:px-10 relative">
@@ -101,12 +108,24 @@ const ProjectOverview = ({ params }) => {
                 <ProjectTechnologiesMini techStack={techStack} />
 
                 <div className="flex items-center gap-4 mt-10">
-                  <ShinyButton icon={<Globe />} iconPosition="left" onClick={() => handleButtonClick(liveDemoUrl)}>
-                    View Demo
+                  <ShinyButton icon={<Globe />} iconPosition="left">
+                    <Link
+                      href={adjustedLiveDemoUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      View Demo
+                    </Link>
                   </ShinyButton>
 
-                  <ShinyButton icon={<Code />} iconPosition="left" onClick={() => handleButtonClick(sourceCodeUrl)}>
-                    Source Code
+                  <ShinyButton icon={<Code />} iconPosition="left">
+                    <Link
+                      href={adjustedSourceCodeUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Source Code
+                    </Link>
                   </ShinyButton>
                 </div>
               </div>
@@ -117,21 +136,6 @@ const ProjectOverview = ({ params }) => {
         </div>
 
         <Footer />
-
-        {showPopup && (
-          <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
-            <div className="bg-white dark:bg-dark-200 p-6 rounded-lg max-w-sm w-full text-center">
-              <h3 className="text-xl font-semibold mb-4">Unavailable</h3>
-              <p>The project is not ready for demo or public access.</p>
-              <button
-                className="mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
-                onClick={() => setShowPopup(false)}
-              >
-                Close
-              </button>
-            </div>
-          </div>
-        )}
       </div>
     </main>
   );
