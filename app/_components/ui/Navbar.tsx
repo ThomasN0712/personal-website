@@ -7,7 +7,8 @@ import {
   useScroll,
 } from "framer-motion";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { Sun, Moon } from "lucide-react";
 
 export const Navbar = ({
   navItems,
@@ -21,58 +22,101 @@ export const Navbar = ({
   className?: string;
 }) => {
   const { scrollYProgress } = useScroll();
-
   const [visible, setVisible] = useState(true);
+  const [darkMode, setDarkMode] = useState(true);
+  const [activeIndex, setActiveIndex] = useState<number | null>(null); // Track active link index
 
-  useMotionValueEvent(scrollYProgress, "change", (current) => {
-    // Check if current is not undefined and is a number
-    if (typeof current === "number") {
-      let direction = current! - scrollYProgress.getPrevious()!;
+  useEffect(() => {
+    let prevScrollY = 0;
 
-      if (scrollYProgress.get() < 0.05) {
-        setVisible(true);
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      const isScrollingDown = currentScrollY > prevScrollY;
+
+      if (isScrollingDown) {
+        setVisible(false);
       } else {
-        if (direction < 0) {
-          setVisible(true);
-        } else {
-          setVisible(false);
-        }
+        setVisible(true);
       }
-    }
-  });
+      prevScrollY = currentScrollY;
+    };
+
+    const handleMouseMove = (e: MouseEvent) => {
+      if (e.clientY < 50) {
+        setVisible(true);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("mousemove", handleMouseMove);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, []);
 
   return (
     <AnimatePresence mode="wait">
-      <motion.div
-        initial={{
-          opacity: 1,
-          y: -100,
-        }}
-        animate={{
-          y: visible ? 0 : -100,
-          opacity: visible ? 1 : 0,
-        }}
-        transition={{
-          duration: 0.2,
-        }}
-        className={cn(
-          "flex max-w-fit fixed top-10 inset-x-0 mx-auto border border-dark-700 rounded-lg bg-dark-200 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] z-[5000] px-8 py-4  items-center justify-center space-x-4",
-          className
-        )}
-      >
-        {navItems.map((navItem: any, idx: number) => (
-          <Link
-            key={`link=${idx}`}
-            href={navItem.link}
-            className={cn(
-              "relative text-neutral-50 items-center flex space-x-1 hover:text-neutral-300"
-            )}
+      {visible && (
+        <motion.div
+          initial={{
+            opacity: 1,
+            y: -100,
+          }}
+          animate={{
+            y: visible ? 0 : -100,
+            opacity: visible ? 1 : 0,
+          }}
+          exit={{
+            y: -100,
+            opacity: 0,
+          }}
+          transition={{
+            duration: 0.2,
+          }}
+          className={cn(
+            "flex max-w-fit fixed top-10 inset-x-0 mx-auto border border-dark-700 rounded-lg bg-white/10 backdrop-blur-md shadow-lg z-[5000] px-8 py-4 items-center justify-center space-x-4",
+            className
+          )}
+        >
+          {navItems.map((navItem, idx) => (
+            <Link
+              key={`link=${idx}`}
+              href={navItem.link}
+              className={cn(
+                "relative text-neutral-50 items-center flex space-x-1 hover:text-primary transition duration-200"
+              )}
+              onClick={() => setActiveIndex(idx)} // Set active link on click
+            >
+              <span className="block sm:hidden text-neutral-50 hover:text-primary transition-colors duration-200">
+                {navItem.icon}
+              </span>
+              <span className="hidden sm:block font-medium relative">
+                {navItem.name}
+                {/* Render underline only for the active link */}
+                {activeIndex === idx && (
+                  <motion.span
+                    layoutId="underline"
+                    className="absolute inset-x-0 bottom-0 h-0.5 bg-primary"
+                    initial={{ opacity: 0, scaleX: 0 }}
+                    animate={{ opacity: 1, scaleX: 1 }}
+                    transition={{ duration: 0.2 }}
+                  />
+                )}
+              </span>
+            </Link>
+          ))}
+
+          {/* Dark/Light Theme Toggle */}
+          <button
+            onClick={() => setDarkMode(!darkMode)}
+            className="text-neutral-50 hover:text-primary transition duration-200"
           >
-            <span className="block sm:hidden">{navItem.icon}</span>
-            <span className="hidden sm:block font-medium">{navItem.name}</span>
-          </Link>
-        ))}
-      </motion.div>
+            {darkMode ? <Sun size={24} /> : <Moon size={24} />}
+          </button>
+        </motion.div>
+      )}
     </AnimatePresence>
   );
 };

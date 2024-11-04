@@ -16,7 +16,6 @@ const navItems = [
   { name: "Home", link: "#home", icon: <House /> },
   { name: "Work", link: "#work", icon: <BriefcaseBusiness /> },
   { name: "About", link: "#about", icon: <UserRound /> },
-  { name: "Contact", link: "#contact", icon: <ContactIco /> },
 ];
 
 const Homepage = () => {
