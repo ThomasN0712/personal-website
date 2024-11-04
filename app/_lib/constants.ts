@@ -1,3 +1,29 @@
+export const educationData = [
+  {
+    // Place holder
+    id: 1,
+    institution: "Digipen Institute of Technology Singapore",
+    logo: "/path/to/digipen-logo.png",
+    degree: "BS in Computer Science in Real-Time Interactive Simulation",
+    dates: "Sep 2019 - Apr 2023",
+    description: [
+      "Graduated with a Minor in Mathematics",
+      "President of Digipen Student Management Committee for freshman year",
+      "3-time recipient of the Dean's Honor List",
+    ],
+    tags: ["Final Year Project", "2nd Year Project"],
+  },
+  {
+    id: 2,
+    institution: "Singapore Polytechnic",
+    logo: "/path/to/sp-logo.png",
+    degree: "Diploma in Games Design and Development",
+    dates: "Apr 2014 - May 2017",
+    description: [],
+  },
+];
+
+
 export const techCardsItems = [
   {
     name: "Python",
