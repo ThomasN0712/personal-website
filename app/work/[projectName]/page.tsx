@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Footer from "@/app/_components/Footer";
 import ProjectTechnologiesMini from "@/app/_components/ProjectTechnologiesMini";
 import { Navbar } from "@/app/_components/ui/Navbar";
@@ -16,11 +17,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
-export function generateMetadata({
-  params,
-}: {
-  params: { projectName: string };
-}) {
+export function generateMetadata({ params }) {
   const projectId = params.projectName;
   const project = portfolioProjects.find((project) => project.id === projectId);
 
@@ -38,7 +35,7 @@ const navItems = [
   { name: "Contact", link: "/#contact", icon: <ContactIcon /> },
 ];
 
-const ProjectOverview = ({ params }: { params: { projectName: string } }) => {
+const ProjectOverview = ({ params }) => {
   const projectId = params.projectName;
   const project = portfolioProjects.find((project) => project.id === projectId);
 
@@ -53,6 +50,15 @@ const ProjectOverview = ({ params }: { params: { projectName: string } }) => {
     liveDemoUrl,
     sourceCodeUrl,
   } = project;
+
+  const [showPopup, setShowPopup] = useState(false);
+  const handleButtonClick = (url) => {
+    if (!url) {
+      setShowPopup(true);
+    } else {
+      window.open(url, "_blank");
+    }
+  };
 
   return (
     <main className="flex flex-col px-5 sm:px-10 relative">
@@ -95,16 +101,12 @@ const ProjectOverview = ({ params }: { params: { projectName: string } }) => {
                 <ProjectTechnologiesMini techStack={techStack} />
 
                 <div className="flex items-center gap-4 mt-10">
-                  <ShinyButton icon={<Globe />} iconPosition="left">
-                    <Link href={liveDemoUrl} target="_blank">
-                      View Demo
-                    </Link>
+                  <ShinyButton icon={<Globe />} iconPosition="left" onClick={() => handleButtonClick(liveDemoUrl)}>
+                    View Demo
                   </ShinyButton>
 
-                  <ShinyButton icon={<Code />} iconPosition="left">
-                    <Link href={sourceCodeUrl} target="_blank">
-                      Source Code
-                    </Link>
+                  <ShinyButton icon={<Code />} iconPosition="left" onClick={() => handleButtonClick(sourceCodeUrl)}>
+                    Source Code
                   </ShinyButton>
                 </div>
               </div>
@@ -115,6 +117,21 @@ const ProjectOverview = ({ params }: { params: { projectName: string } }) => {
         </div>
 
         <Footer />
+
+        {showPopup && (
+          <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+            <div className="bg-white dark:bg-dark-200 p-6 rounded-lg max-w-sm w-full text-center">
+              <h3 className="text-xl font-semibold mb-4">Unavailable</h3>
+              <p>The project is not ready for demo or public access.</p>
+              <button
+                className="mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+                onClick={() => setShowPopup(false)}
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        )}
       </div>
     </main>
   );

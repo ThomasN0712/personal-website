@@ -1,172 +1,140 @@
-export const techCardsItems = [
-  {
-    name: "Figma",
-    description: "Design Tool",
-    imageUrl: "/imgs/logos/figma-logo.svg",
-    bgColor: "bg-[#0ACF83]/20",
-  },
-  {
-    name: "TypeScript",
-    description: "JavaScript but better",
-    imageUrl: "/imgs/logos/typescript.svg",
-    bgColor: "bg-[#3178C6]/20",
-  },
-  {
-    name: "React",
-    description: "JavaScript Library",
-    imageUrl: "/imgs/logos/react.svg",
-    bgColor: "bg-[#61DAFB]/20",
-  },
-  {
-    name: "NextJS",
-    description: "React framework",
-    imageUrl: "/imgs/logos/nextjs.svg",
-    bgColor: "bg-dark-200/10 dark:bg-white/10",
-  },
-  {
-    name: "Tailwind",
-    description: "CSS framework",
-    imageUrl: "/imgs/logos/tailwind.svg",
-    bgColor: "bg-[#0EA5E9]/20",
-  },
-  {
-    name: "Git",
-    description: "Version control",
-    imageUrl: "/imgs/logos/git.svg",
-    bgColor: "bg-[#F1502F]/20",
-  },
-  {
-    name: "Supabase",
-    description: "Backend tool",
-    imageUrl: "/imgs/logos/supabase.svg",
-    bgColor: "bg-[#3ECF8E]/20",
-  },
-  {
-    name: "Appwrite",
-    description: "Backend tool",
-    imageUrl: "/imgs/logos/appwrite.svg",
-    bgColor: "bg-[#F02D65]/20",
-  },
+import { useState } from "react";
+import Footer from "@/app/_components/Footer";
+import ProjectTechnologiesMini from "@/app/_components/ProjectTechnologiesMini";
+import { Navbar } from "@/app/_components/ui/Navbar";
+import ShinyButton from "@/app/_components/ui/ShinyButton";
+import { portfolioProjects } from "@/app/_lib/constants";
+import {
+  BriefcaseBusiness,
+  Code,
+  ContactIcon,
+  Globe,
+  House,
+  MoveDown,
+  UserRound,
+} from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import { notFound } from "next/navigation";
+
+export function generateMetadata({ params }) {
+  const projectId = params.projectName;
+  const project = portfolioProjects.find((project) => project.id === projectId);
+
+  if (!project) return { title: "Not Found" };
+
+  return {
+    title: `Project ${project.heading}`,
+  };
+}
+
+const navItems = [
+  { name: "Home", link: "/", icon: <House /> },
+  { name: "Work", link: "/#work", icon: <BriefcaseBusiness /> },
+  { name: "About", link: "/#about", icon: <UserRound /> },
+  { name: "Contact", link: "/#contact", icon: <ContactIcon /> },
 ];
 
-export const portfolioProjects = [
-  {
-    id: "shoptidy",
-    heading: "Shoptidy",
-    subheading: "a modern e-commerce website",
-    description:
-      "A modern website with all ecommerce functionalities. It includes features like product browsing, shopping cart, user authentication, ordering a product... The application is developed with react + typescript for frontend part, and Supabase as backend.",
-    imageUrl: "/imgs/projects/portfolio-mockup2.png",
-    techStack: [
-      "TypeScript",
-      "React",
-      "Redux",
-      "Supabase",
-      "TailwindCSS",
-      "shadcn/ui",
-    ],
-    liveDemoUrl: "https://shoptidy.vercel.app",
-    sourceCodeUrl: "https://github.com/andrijaweb/ecommerce-app",
-  },
-  {
-    id: "socialsphere",
-    heading: "SocialSphere",
-    subheading: "connect with your friends online",
-    description:
-      "Beautifully designed social media application with all functionalities of modern social app. Users can create, edit, and delete posts, as well as explore posts from others. The app features profile management where users can view and edit their profiles, and also save posts for later.",
-    imageUrl: "/imgs/projects/portfolio-mockup1.png",
-    techStack: [
-      "JavaScript",
-      "React",
-      "CRUD",
-      "Appwrite",
-      "TailwindCSS",
-      "TanStack",
-    ],
-    liveDemoUrl: "https://socialspherenetwork.vercel.app",
-    sourceCodeUrl: "https://github.com/andrijaweb/socialmedia-reactapp",
-  },
-  {
-    id: "nextcut",
-    heading: "NextCut",
-    subheading: "a fresh cut in a few clicks",
-    description:
-      "A responsive web application designed to schedule and manage barber appointments. Potentional customers can create their account and schedule a new haircut. There is clearly defined period of time that is awailable for bookings. Admin have information about all appointments on dashboard page, and he is able to manage them in few clicks.",
-    imageUrl: "/imgs/projects/portfolio-mockup3.jpg",
-    techStack: [
-      "TypeScript",
-      "NextJS",
-      "Appwrite",
-      "TailwindCSS",
-      "Advanced forms",
-    ],
-    liveDemoUrl: "https://nextcut.vercel.app",
-    sourceCodeUrl: "https://github.com/andrijaweb/nextCut-app",
-  },
-];
+const ProjectOverview = ({ params }) => {
+  const projectId = params.projectName;
+  const project = portfolioProjects.find((project) => project.id === projectId);
 
-export const tooltipItems = [
-  {
-    id: 1,
-    name: "Bogdan Aleksic",
-    designation: "Great job!",
-    image: "/imgs/avatars/bogdan.svg",
-  },
-  {
-    id: 2,
-    name: "Djordje Djurovic",
-    designation: "Incredibly responsible",
-    image: "/imgs/avatars/djordje.jpeg",
-  },
-  {
-    id: 3,
-    name: "Anthony Sean",
-    designation: "Highly recommended!",
-    image: "/imgs/avatars/Anthony.jpg",
-  },
-  {
-    id: 4,
-    name: "Alex Finn",
-    designation: "Enjoyable experience.",
-    image: "/imgs/avatars/Alex.jpg",
-  },
-];
+  if (!project) return notFound();
 
-export const testimonialItems = [
-  {
-    id: 1,
-    stars: 5,
-    name: "Alex Finn",
-    proffesion: "Lead Web Designer at knots.io",
-    description:
-      "“Working with Andrija was a very smooth experience from start to finish.  He not only brings strong technical skills to front-end development, but his attention to detail and commitment to delivering pixel-perfect  designs made a huge difference in our project. He is enthusiastic in  suggesting improvements. Always ready to answer questions or provide  updates. If you're looking for a reliable developer who brings  creativity and efficiency to the table, Andrija is the right person!”",
-    image: "/imgs/avatars/Alex.jpg",
-  },
-  {
-    id: 2,
-    stars: 5,
-    name: "Djordje Djurovic",
-    proffesion: "CEO at DigitalityLab",
-    description:
-      "“Andrija is an outstanding frontend specialist and presents consistently high level of work. During our work together, he has demonstrated extraordinary skills in simplifying complex ideas into clean, functional, and visually appealing designs. His communication is to the point and time management is perfect, even for the most pressing deadlines. I would highly recommend him to any company looking to bring on a frontend developer with strong technical skills and an keen eye for design.”",
-    image: "/imgs/avatars/djordje.jpeg",
-  },
-  {
-    id: 3,
-    stars: 5,
-    name: "Anthony Sean",
-    proffesion: "Chief Technology Officer at DealJet",
-    description:
-      "“On several occasions, I have had the privilege to work with Andrija, and he has never failed to impress. While he possesses a great level of knowledge in frontend development, what I find most remarkable about him is his obsession with getting every detail right in order to achieve perfection in the end-user experience. He always pays attention to the project requirements, raises up some pertinent issues, and most importantly delivers beyond the call of duty. Andrija is the kind of person who adds value to the team he's in!”",
-    image: "/imgs/avatars/Anthony.jpg",
-  },
-  {
-    id: 4,
-    stars: 5,
-    name: "Bogdan Aleksic",
-    proffesion: "Investment Educator and Crypto Expert",
-    description:
-      "“I got on board Andrija from Upwork to help me develop a website for my course on blockchain, cryptocurrency, and investment techniques. Because of his effort, I was able to generate considerable sales from my course after launching it, and I have received good reviews about the design and functionality of the website. Andrija is someone I would highly recommend!”",
-    image: "/imgs/avatars/bogdan.svg",
-  },
-];
+  const {
+    heading,
+    subheading,
+    description,
+    imageUrl,
+    techStack,
+    liveDemoUrl,
+    sourceCodeUrl,
+  } = project;
+
+  const [showPopup, setShowPopup] = useState(false);
+  const handleButtonClick = (url) => {
+    if (!url) {
+      setShowPopup(true);
+    } else {
+      window.open(url, "_blank");
+    }
+  };
+
+  return (
+    <main className="flex flex-col px-5 sm:px-10 relative">
+      <div className="max-w-7xl mx-auto w-full">
+        <Navbar navItems={navItems} />
+
+        <div className="pt-36">
+          <div className="h-screen w-full dark:bg-dark-100 bg-white dark:bg-grid-white/[0.04] bg-grid-black/[0.06] absolute top-0 left-0 flex items-center justify-center">
+            <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-dark-100 bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
+          </div>
+
+          <div className="relative z-10">
+            <h1 className="text-[40px] md:text-6xl lg:text-7xl text-center max-w-5xl leading-normal tracking-wide uppercase mx-auto">
+              <span className="font-black">{heading}</span>
+              <br />
+              {subheading}
+            </h1>
+
+            <div className="flex items-center justify-center my-24">
+              <Link href="#image">
+                <MoveDown className="size-16" strokeWidth={1} />
+              </Link>
+            </div>
+
+            <div className="rounded-lg overflow-hidden" id="image">
+              <Image
+                src={imageUrl}
+                width={2000}
+                height={1000}
+                alt="portfolio"
+              />
+            </div>
+
+            <div className="mt-8 mb-32 flex flex-col md:flex-row gap-10 md:gap-5 justify-between">
+              <div className="flex-1">
+                <h2 className="text-3xl min-[430px]:text-4xl md:text-5xl dark:text-stone-200 mb-5">
+                  Project Overview
+                </h2>
+
+                <ProjectTechnologiesMini techStack={techStack} />
+
+                <div className="flex items-center gap-4 mt-10">
+                  <ShinyButton icon={<Globe />} iconPosition="left" onClick={() => handleButtonClick(liveDemoUrl)}>
+                    View Demo
+                  </ShinyButton>
+
+                  <ShinyButton icon={<Code />} iconPosition="left" onClick={() => handleButtonClick(sourceCodeUrl)}>
+                    Source Code
+                  </ShinyButton>
+                </div>
+              </div>
+
+              <p className="flex-1">{description}</p>
+            </div>
+          </div>
+        </div>
+
+        <Footer />
+
+        {showPopup && (
+          <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+            <div className="bg-white dark:bg-dark-200 p-6 rounded-lg max-w-sm w-full text-center">
+              <h3 className="text-xl font-semibold mb-4">Unavailable</h3>
+              <p>The project is not ready for demo or public access.</p>
+              <button
+                className="mt-4 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+                onClick={() => setShowPopup(false)}
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        )}
+      </div>
+    </main>
+  );
+};
+
+export default ProjectOverview;

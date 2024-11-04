@@ -22,11 +22,9 @@ const Skills = () => {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.25 }}
-          className="text-sm min-[430px]:text-base max-w-lg md:max-w-3xl text-dark-200/70 dark:text-stone-200/70"
-        >
-          I&apos;m proficient in a range of modern technologies that empower me
-          to build highly functional solutions. These are some of my main
-          technologies.
+          className="text-lg min-[430px]:text-xl max-w-lg md:max-w-3xl text-dark-200 dark:text-stone-200"     >
+          I have expertise in various modern technologies that enable me to develop highly 
+          functional solutions. Here are some of the key technologies I work with.
         </motion.p>
       </div>
 
