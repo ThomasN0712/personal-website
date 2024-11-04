@@ -1,6 +1,41 @@
-export const educationData = [
+export interface Experience {
+  id: number;
+  company: string;
+  logo: string;
+  position: string;
+  dates: string;
+  description: string[];
+  tags?: string[];
+}
+
+export interface Education {
+  id: number;
+  institution: string;
+  logo: string;
+  degree: string;
+  dates: string;
+  description: string[];
+  tags?: string[];
+}
+
+
+export const experienceData: Experience[] = [
   {
-    // Place holder
+    id: 1,
+    company: "Cal State Long Beach",
+    logo: "/imgs/logos/csulb-logo.png",
+    position: "Research Assistant",
+    dates: "Jul 2023 - Present",
+    description: [
+      "Developed the Java backend for a bank account servicing process with multiple channel integrations using Activiti workflow",
+      "Built a custom database migration tool using Python and MariaDB and facilitated the migration of 1000+ processes from a vendor platform",
+    ],
+  },
+  // Add more experiences as needed
+];
+
+export const educationData: Education[] = [
+  {
     id: 1,
     institution: "Digipen Institute of Technology Singapore",
     logo: "/path/to/digipen-logo.png",
@@ -13,14 +48,7 @@ export const educationData = [
     ],
     tags: ["Final Year Project", "2nd Year Project"],
   },
-  {
-    id: 2,
-    institution: "Singapore Polytechnic",
-    logo: "/path/to/sp-logo.png",
-    degree: "Diploma in Games Design and Development",
-    dates: "Apr 2014 - May 2017",
-    description: [],
-  },
+  // Add more entries as needed
 ];
 
 

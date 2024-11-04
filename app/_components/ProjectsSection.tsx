@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { portfolioProjects } from "../_lib/constants";
+import { portfolioProjects } from "@/app/_lib/constants";
 import ProjectCard from "./ProjectCard";
 import ShinyButton from "./ui/ShinyButton";
 import { ChevronRight } from "lucide-react";

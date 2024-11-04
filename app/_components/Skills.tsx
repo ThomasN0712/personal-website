@@ -1,6 +1,7 @@
 "use client";
 
-import { techCardsItems } from "../_lib/constants";
+import { techCardsItems } from "@/app/_lib/constants";
+
 import TechCard from "./TechCard";
 import { motion } from "framer-motion";
 
