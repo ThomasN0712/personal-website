@@ -92,7 +92,7 @@ export const Navbar = ({
               <span className="block sm:hidden text-neutral-50 hover:text-primary transition-colors duration-200">
                 {navItem.icon}
               </span>
-              <span className="hidden sm:block font-medium relative dark: text-white">
+              <span className="hidden sm:block font-medium relative text-neutral-900 dark:text-white">
                 {navItem.name}
                 {/* Render underline only for the active link */}
                 {activeIndex === idx && (

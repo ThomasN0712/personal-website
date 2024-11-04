@@ -54,11 +54,16 @@ const HeroSection = () => {
             </a>
             <a href="https://github.com/ThomasN0712" target="_blank" rel="noopener noreferrer">
               <img
-                src="imgs/logos/github-logo.svg"
+                src="imgs/logos/github-dark-logo.svg"
                 alt="GitHub"
-                className="w-6 h-6 dark:invert"
+                className="w-6 h-6 dark:hidden"
               />
-            </a>  
+              <img
+                src="imgs/logos/github-logo.svg"
+                alt="GitHub Dark Mode"
+                className="w-6 h-6 hidden dark:block"
+              />
+            </a>
             <a
               href="mailto:thomasnguyen0712@gmail.com" 
               className="text-dark-200 dark:text-stone-200 hover:text-primary transition-colors duration-200"

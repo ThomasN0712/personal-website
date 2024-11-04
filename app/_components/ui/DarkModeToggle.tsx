@@ -26,7 +26,7 @@ export const DarkModeToggle = () => {
   };
 
   return (
-    <button onClick={toggleDarkMode} className="text-neutral-50 hover:text-primary transition duration-200">
+    <button onClick={toggleDarkMode}className="text-neutral-900 dark:text-white hover:text-purple-700 dark:hover:text-yellow-400 transition duration-200">
       {darkMode ? <Sun size={24} /> : <Moon size={24} />}
     </button>
   );
