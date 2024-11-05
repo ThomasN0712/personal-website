@@ -140,7 +140,7 @@ export const techCardsItems = [
   },
   {
     name: "ChatGPT",
-    description: "AI Model",
+    description: "Large Language Model",
     imageUrl: "/imgs/logos/chatgpt.svg",
     bgColor: "bg-[#00A67E]/20",
   },
