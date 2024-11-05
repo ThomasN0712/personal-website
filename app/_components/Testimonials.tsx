@@ -3,7 +3,6 @@
 import AnimatedParagraph from "@/app/_components/AnimatedParagraph";
 import { testimonialItems } from "@/app/_lib/constants";
 import { motion } from "framer-motion";
-import { Star } from "lucide-react";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
@@ -37,23 +36,6 @@ const Testimonials = () => {
 
   return (
     <div ref={ref} className="mb-32 space-y-10">
-      <motion.div
-        className="flex justify-center items-center gap-2 sm:gap-2.5"
-        key={`stars-${curIndex}`}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1.5 }}
-      >
-        {Array.from({ length: currentTestimonial.stars }).map((_, index) => (
-          <Star
-            key={index}
-            fill="#3B82F6"
-            strokeWidth={0}
-            className="size-10 sm:size-12"
-          />
-        ))}
-      </motion.div>
-
       <motion.div
         key={`description-${curIndex}`}
         initial={{ opacity: 0 }}
