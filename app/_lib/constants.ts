@@ -56,6 +56,19 @@ export const experienceData: Experience[] = [
       "Developed and maintained spreadsheets to track media guest appearances and their schedules."
     ],
   },
+  {
+    id: 4,
+    company: "Au Lac Plant Base Cuisine",
+    logo: "/imgs/logos/aulac-logo.svg",
+    position: "Manager",
+    dates: "September 2020 - July 2024",
+    description: [
+      "Improved performance of floor staff by supporting front and back team communication, allowing the kitchen team to halves ticket reading time.",
+      "Developed a new program for writing and calculating cash reports, payroll and tip distribution.",
+      "Ensure customer and employee satisfaction daily through food quality control and maintaining cleanliness standards.",
+      "Contact and support with customer online review, order and questions." 
+    ],
+  },
 ];
 
 
@@ -146,7 +159,7 @@ export const portfolioProjects = [
     subheading: "a snap-chat clone + E2EE",
     description:
       "A responsive, high-performance web application built with a modern tech stack. The frontend, developed using React, Vite, and styled with SCSS, provides an interactive and visually appealing user experience. The backend is powered by Golang, MongoDB, and Redis, ensuring efficient data management and fast server-side processing. With Ionic and Capacitor, the app offers seamless functionality across web and mobile platforms.",
-    imageUrl: "/imgs/projects/portfolio-mockup2.png",
+    imageUrl: "/imgs/projects/portfolio-wraith.png",
     techStack: [
       "React",
       "Golang",
@@ -155,11 +168,29 @@ export const portfolioProjects = [
       "Capacitor",
       "MongoDB",
       "Redis",
-      "SCSS"
+      "SCSS",
+      "Zustand"
+    ],
+    liveDemoUrl: "not-found",
+    sourceCodeUrl: "not-found",
+  },
+  {
+    id: "personal-website",
+    heading: "Personal Website",
+    subheading: "A showcase of my projects and skills",
+    description: "This personal website was built using modern web technologies to create a responsive, clean, and efficient user experience. Developed with Next.js and React, styled using Tailwind CSS, and enhanced with TypeScript for type safety, this site demonstrates my skills in building functional and visually appealing web applications.",
+    imageUrl: "/imgs/projects/portfolio-personal-website.png",
+    techStack: [
+      "Next.js",
+      "React",
+      "Tailwind CSS",
+      "TypeScript"
     ],
     liveDemoUrl: "not-found",
     sourceCodeUrl: "not-found",
   }
+  
+  
 ];
 
 export const testimonialItems = [
