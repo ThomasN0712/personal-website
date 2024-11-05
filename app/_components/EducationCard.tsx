@@ -33,13 +33,6 @@ const EducationCard: React.FC<EducationCardProps> = ({ education }) => (
           <li key={index}>{item}</li>
         ))}
       </ul>
-      {education.tags && (
-        <div className="mt-2 flex space-x-2">
-          {education.tags.map((tag, index) => (
-            <span key={index} className="px-2 py-1 bg-gray-200 dark:bg-gray-600 rounded text-sm">{tag}</span>
-          ))}
-        </div>
-      )}
     </div>
   </motion.div>
 );

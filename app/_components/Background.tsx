@@ -27,7 +27,9 @@ const Background = () => {
         <button
           onClick={() => setActiveTab("Work")}
           className={`py-2 px-4 rounded-lg font-semibold ${
-            activeTab === "Work" ?  "bg-gray-300 text-black" : "bg-gray-800 text-white"
+            activeTab === "Work" 
+            ? "bg-gray-800 text-white dark:bg-gray-400 text-black"
+            : "bg-gray-400 text-black dark:bg-gray-800 text-white" 
           }`}
         >
           Work
@@ -35,7 +37,9 @@ const Background = () => {
         <button
           onClick={() => setActiveTab("Education")}
           className={`py-2 px-4 rounded-lg font-semibold ${
-            activeTab === "Education" ? "bg-gray-300 text-black" : "bg-gray-800 text-white" 
+            activeTab === "Education" 
+            ? "bg-gray-800 text-white dark:bg-gray-400 text-black"
+            : "bg-gray-400 text-black dark:bg-gray-800 text-white"
           }`}
         >
           Education
