@@ -191,7 +191,7 @@ export const researchPapers = [
     description: "",
     authors: "Thomas Nguyen, Hossein Sayadi",
     publicationDate: "2024",
-    imageUrl: "/images/chatgpt-gemini-paper.jpg",
+    imageUrl: "/imgs/projects/chatgpt-gemini-research-paper.png",
     link: "https://example.com/paper1",
   },
   {
@@ -202,7 +202,7 @@ export const researchPapers = [
     authors:
       "Zhangying He, Thomas Nguyen, Tahereh Miari, Mehrdad Aliasgari, Setareh Rafatirad, Hossein Sayadi",
     publicationDate: "2024",
-    imageUrl: "/images/iot-security.jpg",
+    imageUrl: "/imgs/projects/ai-companion-research-paper.png",
     link: "https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10578820",
   },
   // {
@@ -222,6 +222,22 @@ export const testimonialItems = [
     id: 1,
     name: "Dr. Hossein Sayadi",
     proffesion: "Professor at Cal State Long Beach",
+    description:
+      "“Lorem ipsum odor amet, consectetuer adipiscing elit. Habitasse nullam nullam mauris hendrerit viverra donec parturient fames? Habitasse neque nec viverra lobortis tincidunt morbi. Pulvinar ligula euismod tempus lacinia habitasse ligula platea etiam. Tempor imperdiet bibendum inceptos pellentesque luctus per mi blandit. Congue potenti fusce praesent, erat a habitant erat eget. Tempor pretium malesuada nibh habitant finibus sollicitudin primis. Luctus litora accumsan venenatis nisi et egestas.”",
+    image: "/imgs/avatars/Alex.jpg",
+  },
+  {
+    id: 2,
+    name: "Michael",
+    proffesion: "Software Engineer",
+    description:
+      "“Lorem ipsum odor amet, consectetuer adipiscing elit. Habitasse nullam nullam mauris hendrerit viverra donec parturient fames? Habitasse neque nec viverra lobortis tincidunt morbi. Pulvinar ligula euismod tempus lacinia habitasse ligula platea etiam. Tempor imperdiet bibendum inceptos pellentesque luctus per mi blandit. Congue potenti fusce praesent, erat a habitant erat eget. Tempor pretium malesuada nibh habitant finibus sollicitudin primis. Luctus litora accumsan venenatis nisi et egestas.”",
+    image: "/imgs/avatars/Alex.jpg",
+  },
+  {
+    id: 1,
+    name: "William Tran",
+    proffesion: "Bussiness Analyst at The Lab Consulting",
     description:
       "“Lorem ipsum odor amet, consectetuer adipiscing elit. Habitasse nullam nullam mauris hendrerit viverra donec parturient fames? Habitasse neque nec viverra lobortis tincidunt morbi. Pulvinar ligula euismod tempus lacinia habitasse ligula platea etiam. Tempor imperdiet bibendum inceptos pellentesque luctus per mi blandit. Congue potenti fusce praesent, erat a habitant erat eget. Tempor pretium malesuada nibh habitant finibus sollicitudin primis. Luctus litora accumsan venenatis nisi et egestas.”",
     image: "/imgs/avatars/Alex.jpg",

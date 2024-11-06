@@ -7,11 +7,11 @@ import ExperienceCard from "./ExperienceCard";
 import EducationCard from "./EducationCard";
 
 const Background = () => {
-  const [activeTab, setActiveTab] = useState("Work");
+  const [activeTab, setActiveTab] = useState("Experience");
 
   return (
     <div className="relative z-10 py-16 sm:py-24" id="about">
-      <div className="space-y-4 mb-10">
+      {/* <div className="space-y-4 mb-10">
         <motion.h1
           initial={{ opacity: 0, x: -75 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -21,35 +21,50 @@ const Background = () => {
         >
           Experience / Education
         </motion.h1>
+      </div> */}
+
+      <div className="flex space-x-4 mb-8 justify-center">
+        <div className="relative w-full max-w-lg mt-6">
+          <div className="flex bg-gray-400 dark:bg-gray-800 rounded-lg overflow-hidden">
+            {/* Slider Indicator */}
+            <div
+              className={`absolute top-0 left-0 w-1/2 h-full bg-gray-800 dark:bg-gray-400 transition-transform duration-300 rounded-lg ${
+                activeTab === "Education" ? "transform translate-x-full" : ""
+              }`}
+            ></div>
+
+            {/* Experience Button */}
+            <button
+              onClick={() => setActiveTab("Experience")}
+              className={`relative py-2 px-4 w-1/2 rounded-lg font-semibold z-10 transition-colors duration-300 ${
+                activeTab === "Experience"
+                  ? "text-white dark:text-black"
+                  : "text-black dark:text-white"
+              }`}
+            >
+              Experience
+            </button>
+
+            {/* Education Button */}
+            <button
+              onClick={() => setActiveTab("Education")}
+              className={`relative py-2 px-4 w-1/2 rounded-lg font-semibold z-10 transition-colors duration-300 ${
+                activeTab === "Education"
+                  ? "text-white dark:text-black"
+                  : "text-black dark:text-white"
+              }`}
+            >
+              Education
+            </button>
+          </div>
+        </div>
       </div>
 
-      <div className="flex space-x-4 mb-8">
-        <button
-          onClick={() => setActiveTab("Work")}
-          className={`py-2 px-4 rounded-lg font-semibold ${
-            activeTab === "Work" 
-            ? "bg-gray-800 text-white dark:bg-gray-400 text-black"
-            : "bg-gray-400 text-black dark:bg-gray-800 text-white" 
-          }`}
-        >
-          Work
-        </button>
-        <button
-          onClick={() => setActiveTab("Education")}
-          className={`py-2 px-4 rounded-lg font-semibold ${
-            activeTab === "Education" 
-            ? "bg-gray-800 text-white dark:bg-gray-400 text-black"
-            : "bg-gray-400 text-black dark:bg-gray-800 text-white"
-          }`}
-        >
-          Education
-        </button>
-      </div>
-
-      <div className="relative">
-        <div className="absolute left-8 top-0 bottom-0 w-px bg-gray-300"></div> {/* Timeline line */}
+      <div className="relative border border-gray-500 rounded-lg p-4 opacity-80">
+        <div className="absolute left-14 top-0 bottom-0 w-0.5 bg-gray-500 opacity 80"></div>{" "}
+        {/* Timeline line */}
         <div className="ml-12 space-y-8">
-          {activeTab === "Work" &&
+          {activeTab === "Experience" &&
             experienceData.map((experience) => (
               <ExperienceCard key={experience.id} experience={experience} />
             ))}

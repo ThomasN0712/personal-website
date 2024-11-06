@@ -17,14 +17,15 @@ const HeroSection = () => {
       >
         <div className="flex flex-col justify-center items-center relative z-10 text-center">
           <p className="uppercase font-bold text-sm tracking-widest">
-            Based In California 
+            Based In California, USA
           </p>
           <TextGenerateEffect
             words="Hi this is Thomas 👋"
             className="text-[40px] md:text-6xl lg:text-7xl font-bold text-center max-w-5xl leading-snug tracking-wide"
           />
           <p className="pt-5 pb-10 text-lg sm:text-base md:text-lg text-dark-200 dark:text-stone-200">
-            I&apos;m a Computer Science student, soon will graduate and are actively looking for a job.
+            I&apos;m a Computer Science student, soon will graduate and are
+            actively looking for a job.
           </p>
           <div className="flex flex-col sm:flex-row items-center gap-4">
             <ShinyButton icon={<ChevronRight />}>
@@ -41,7 +42,7 @@ const HeroSection = () => {
               </span>
             </a>
           </div>
-          
+
           {/* Social Links */}
           <div className="flex items-center gap-6 mt-8">
             <a
@@ -52,7 +53,11 @@ const HeroSection = () => {
             >
               <Linkedin size={24} />
             </a>
-            <a href="https://github.com/ThomasN0712" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://github.com/ThomasN0712"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <img
                 src="imgs/logos/github-dark-logo.svg"
                 alt="GitHub"
@@ -65,7 +70,7 @@ const HeroSection = () => {
               />
             </a>
             <a
-              href="mailto:thomasnguyen0712@gmail.com" 
+              href="mailto:thomasnguyen0712@gmail.com"
               className="text-dark-200 dark:text-stone-200 hover:text-primary transition-colors duration-200"
             >
               <Mail size={24} />

@@ -27,7 +27,7 @@ const ProjectCard = ({ project }: { project: ProjectProps }) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: 0.25 }}
-      className="bg-[#F3F4F3] dark:bg-dark-200 rounded-lg p-4 sm:p-8 space-y-8"
+      className="bg-[#F3F4F3] dark:bg-dark-200 rounded-lg p-4 sm:p-8 space-y-8 relative flex flex-col"
     >
       <Link href={`/work/${id}`} className="rounded-lg overflow-hidden block">
         <Image
@@ -38,13 +38,15 @@ const ProjectCard = ({ project }: { project: ProjectProps }) => {
           className="hover:scale-110 transition-transform duration-700"
         />
       </Link>
-      <div>
+      <div className="flex-1">
         <h3 className="text-2xl sm:text-3xl font-semibold">{heading}</h3>
         <div className="mt-4 flex flex-col sm:flex-row justify-between gap-5">
-          <ProjectTechnologiesMini techStack={techStack} />
+          <div className="min-h-[125px] max-h-[125px] overflow-y-auto">
+            <ProjectTechnologiesMini techStack={techStack} />
+          </div>
           <Link
             href={`/work/${id}`}
-            className="p-3 bg-primary hover:bg-primary/80 transition-colors duration-200 rounded-lg self-start sm:self-end"
+            className="p-3 bg-primary hover:bg-primary/80 transition-colors duration-200 rounded-lg mt-auto self-end"
           >
             <MoveUpRight className="size-5 sm:size-8 text-[#F3F4F3] dark:text-dark-200" />
           </Link>

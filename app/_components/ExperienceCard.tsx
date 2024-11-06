@@ -14,12 +14,16 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => (
     transition={{ duration: 0.3 }}
     className="flex items-start space-x-4"
   >
-
     {/* Timeline circle with logo */}
-    <div className="relative w-12 h-12 bg-white rounded-full overflow-hidden mt-2 -ml-10 flex-shrink-0 p-1">
-        <div className="relative w-full h-full">
-          <Image src={experience.logo} alt={`${experience.company} logo`} layout="fill" objectFit="contain" />
-        </div>
+    <div className="relative w-16 h-16 bg-white rounded-full overflow-hidden mt-2 -ml-10 flex-shrink-0 p-1">
+      <div className="relative w-full h-full">
+        <Image
+          src={experience.logo}
+          alt={`${experience.company} logo`}
+          layout="fill"
+          objectFit="contain"
+        />
+      </div>
     </div>
 
     {/* Experience box */}
