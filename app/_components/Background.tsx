@@ -61,14 +61,14 @@ const Background = () => {
       </div>
 
       <div className="relative border border-gray-500 rounded-lg p-4 opacity-80">
-        <div className="absolute left-14 top-0 bottom-0 w-0.5 bg-gray-500 opacity 80"></div>{" "}
+        <div className="absolute left-12 md:left-14 top-0 bottom-0 w-0.5 bg-gray-500 opacity 80"></div>{" "}
         {/* Timeline line */}
         <div className="ml-12 space-y-8">
           {activeTab === "Experience" &&
             experienceData.map((experience) => (
               <div
                 key={experience.id}
-                className="transform transition-transform duration-300 hover:scale-105"
+                className="transform md:transition-transform md:duration-300 md:hover:scale-105"
               >
                 <ExperienceCard experience={experience} />
               </div>
@@ -77,7 +77,7 @@ const Background = () => {
             educationData.map((education) => (
               <div
                 key={education.id}
-                className="transform transition-transform duration-300 hover:scale-105"
+                className="transform md:transition-transform md:duration-300 md:hover:scale-105"
               >
                 <EducationCard education={education} />
               </div>
