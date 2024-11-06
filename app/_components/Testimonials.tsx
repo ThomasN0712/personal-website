@@ -66,12 +66,12 @@ const Testimonials = () => {
         </div>
       </motion.div>
 
-      <div className="flex justify-center items-center gap-1">
+      <div className="flex justify-center items-center gap-2">
         {testimonialItems.map((testimonial, i) => (
           <button
             key={i}
             onClick={() => goToTestimonial(i)}
-            className={`w-12 h-1 ${
+            className={`w-4 h-4 ${
               curIndex === i
                 ? "bg-primary duration-1000"
                 : "bg-[#333333] hover:bg-[#444444] duration-300"

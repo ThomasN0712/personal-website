@@ -51,7 +51,7 @@ const ResearchCard = ({ paper }: { paper: ResearchPaperProps }) => {
         <Link
           href={link}
           target="_blank"
-          className="p-3 bg-primary hover:bg-primary/80 transition-colors duration-200 rounded-lg block text-center"
+          className="font-bold p-3 bg-primary hover:bg-primary/80 transition-colors duration-200 rounded-lg block text-center text-[#F3F4F3] dark:text-dark-200"
         >
           Read this paper
         </Link>
