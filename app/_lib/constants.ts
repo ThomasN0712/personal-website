@@ -18,7 +18,6 @@ export interface Education {
   tags?: string[];
 }
 
-
 export const experienceData: Experience[] = [
   {
     id: 1,
@@ -29,7 +28,7 @@ export const experienceData: Experience[] = [
     description: [
       "Developed and deployed machine learning models for side-channel analysis, achieving a 98% accuracy rate in detecting Hardware Trojan attacks.",
       "Analyzed Large Language Models (LLMs) such as ChatGPT and Google Gemini for applications in Computer Science and Cybersecurity education, leading to a conference publication.",
-      "Assisted in data collection, analysis, and software development to support ongoing research projects."
+      "Assisted in data collection, analysis, and software development to support ongoing research projects.",
     ],
   },
   {
@@ -53,7 +52,7 @@ export const experienceData: Experience[] = [
     description: [
       "Assisted in coordinating media reporters, guests, and celebrities for Star Wars: Galaxy's Edge 2019 grand opening.",
       "Conducted research on potential media contacts and celebrities, assisting in maintaining a comprehensive database.",
-      "Developed and maintained spreadsheets to track media guest appearances and their schedules."
+      "Developed and maintained spreadsheets to track media guest appearances and their schedules.",
     ],
   },
   {
@@ -66,11 +65,10 @@ export const experienceData: Experience[] = [
       "Improved performance of floor staff by supporting front and back team communication, allowing the kitchen team to halves ticket reading time.",
       "Developed a new program for writing and calculating cash reports, payroll and tip distribution.",
       "Ensure customer and employee satisfaction daily through food quality control and maintaining cleanliness standards.",
-      "Contact and support with customer online review, order and questions." 
+      "Contact and support with customer online review, order and questions.",
     ],
   },
 ];
-
 
 export const educationData: Education[] = [
   {
@@ -98,8 +96,6 @@ export const educationData: Education[] = [
     tags: ["Dean's List", "Senior Design Project"],
   },
 ];
-
-
 
 export const techCardsItems = [
   {
@@ -169,7 +165,7 @@ export const portfolioProjects = [
       "MongoDB",
       "Redis",
       "SCSS",
-      "Zustand"
+      "Zustand",
     ],
     liveDemoUrl: "not-found",
     sourceCodeUrl: "not-found",
@@ -178,19 +174,47 @@ export const portfolioProjects = [
     id: "personal-website",
     heading: "Personal Website",
     subheading: "A showcase of my projects and skills",
-    description: "This personal website was built using modern web technologies to create a responsive, clean, and efficient user experience. Developed with Next.js and React, styled using Tailwind CSS, and enhanced with TypeScript for type safety, this site demonstrates my skills in building functional and visually appealing web applications.",
+    description:
+      "This personal website was built using modern web technologies to create a responsive, clean, and efficient user experience. Developed with Next.js and React, styled using Tailwind CSS, and enhanced with TypeScript for type safety, this site demonstrates my skills in building functional and visually appealing web applications.",
     imageUrl: "/imgs/projects/portfolio-personal-website.png",
-    techStack: [
-      "Next.js",
-      "React",
-      "Tailwind CSS",
-      "TypeScript"
-    ],
+    techStack: ["Next.js", "React", "Tailwind CSS", "TypeScript", "Vercel"],
     liveDemoUrl: "not-found",
     sourceCodeUrl: "not-found",
-  }
-  
-  
+  },
+];
+
+export const researchPapers = [
+  {
+    id: "1",
+    title:
+      "ChatGPT vs. Gemini: Comparative Evaluation in Cybersecurity Education with Prompt Engineering Impact",
+    description: "",
+    authors: "Thomas Nguyen, Hossein Sayadi",
+    publicationDate: "2024",
+    imageUrl: "/images/chatgpt-gemini-paper.jpg",
+    link: "https://example.com/paper1",
+  },
+  {
+    id: "2",
+    title:
+      "The AI Companion in Education: Analyzing the Pedagogical Potential of ChatGPT in Computer Science and Engineering",
+    description: "",
+    authors:
+      "Zhangying He, Thomas Nguyen, Tahereh Miari, Mehrdad Aliasgari, Setareh Rafatirad, Hossein Sayadi",
+    publicationDate: "2024",
+    imageUrl: "/images/iot-security.jpg",
+    link: "https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10578820",
+  },
+  // {
+  //   id: "3",
+  //   title: "Bayesian Networks for Predictive Analysis in Healthcare",
+  //   description:
+  //     "This paper presents the application of Bayesian networks to predict patient outcomes, focusing on probabilistic modeling in health informatics to assist in clinical decision-making.",
+  //   authors: "Thomas Nguyen, Emily Zhang",
+  //   publicationDate: "2024",
+  //   imageUrl: "/images/bayesian-healthcare.jpg",
+  //   link: "https://example.com/paper3",
+  // },
 ];
 
 export const testimonialItems = [
