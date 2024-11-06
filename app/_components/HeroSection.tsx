@@ -49,7 +49,7 @@ const HeroSection = () => {
               href="https://www.linkedin.com/in/thomasnguyen0712/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-dark-200 dark:text-stone-200 hover:text-primary transition-colors duration-200"
+              className="text-dark-200 dark:text-stone-200 hover:text-primary transition-colors duration-200 transform hover:scale-110 hover:rotate-3"
             >
               <Linkedin size={24} />
             </a>
@@ -57,6 +57,7 @@ const HeroSection = () => {
               href="https://github.com/ThomasN0712"
               target="_blank"
               rel="noopener noreferrer"
+              className="transform hover:scale-110 hover:-rotate-3 transition-all duration-300"
             >
               <img
                 src="imgs/logos/github-dark-logo.svg"
@@ -71,7 +72,7 @@ const HeroSection = () => {
             </a>
             <a
               href="mailto:thomasnguyen0712@gmail.com"
-              className="text-dark-200 dark:text-stone-200 hover:text-primary transition-colors duration-200"
+              className="text-dark-200 dark:text-stone-200 hover:text-primary transition-colors duration-200 transform hover:scale-110 hover:rotate-3"
             >
               <Mail size={24} />
             </a>
