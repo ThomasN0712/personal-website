@@ -66,11 +66,21 @@ const Background = () => {
         <div className="ml-12 space-y-8">
           {activeTab === "Experience" &&
             experienceData.map((experience) => (
-              <ExperienceCard key={experience.id} experience={experience} />
+              <div
+                key={experience.id}
+                className="transform transition-transform duration-300 hover:scale-105"
+              >
+                <ExperienceCard experience={experience} />
+              </div>
             ))}
           {activeTab === "Education" &&
             educationData.map((education) => (
-              <EducationCard key={education.id} education={education} />
+              <div
+                key={education.id}
+                className="transform transition-transform duration-300 hover:scale-105"
+              >
+                <EducationCard education={education} />
+              </div>
             ))}
         </div>
       </div>
