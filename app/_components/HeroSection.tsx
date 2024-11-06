@@ -1,4 +1,5 @@
 import { ChevronRight, Download, Linkedin, Mail } from "lucide-react";
+import "@/app/_styles/globals.css";
 import ShinyButton from "./ui/ShinyButton";
 import Link from "next/link";
 import { TextGenerateEffect } from "./ui/TextGenerate";
@@ -21,7 +22,7 @@ const HeroSection = () => {
           </p>
           <TextGenerateEffect
             words="Hi this is Thomas 👋"
-            className="text-[40px] md:text-6xl lg:text-7xl font-bold text-center max-w-5xl leading-snug tracking-wide"
+            className="text-[40px] md:text-6xl lg:text-7xl font-bold text-center max-w-5xl leading-snug tracking-wide waving-hand"
           />
           <p className="pt-5 pb-10 text-lg sm:text-base md:text-lg text-dark-200 dark:text-stone-200">
             I&apos;m a Computer Science student, soon will graduate and are
@@ -49,7 +50,7 @@ const HeroSection = () => {
               href="https://www.linkedin.com/in/thomasnguyen0712/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-dark-200 dark:text-stone-200 hover:text-primary transition-colors duration-200 transform hover:scale-110 hover:rotate-3"
+              className="text-dark-200 dark:text-stone-200 hover:text-primary transition-colors duration-200 transform hover:scale-150 hover:rotate-6"
             >
               <Linkedin size={24} />
             </a>
@@ -57,7 +58,7 @@ const HeroSection = () => {
               href="https://github.com/ThomasN0712"
               target="_blank"
               rel="noopener noreferrer"
-              className="transform hover:scale-110 hover:-rotate-3 transition-all duration-300"
+              className="transform hover:scale-150 hover:-rotate-6 transition-all duration-300"
             >
               <img
                 src="imgs/logos/github-dark-logo.svg"
@@ -72,7 +73,7 @@ const HeroSection = () => {
             </a>
             <a
               href="mailto:thomasnguyen0712@gmail.com"
-              className="text-dark-200 dark:text-stone-200 hover:text-primary transition-colors duration-200 transform hover:scale-110 hover:rotate-3"
+              className="text-dark-200 dark:text-stone-200 hover:text-primary transition-colors duration-200 transform hover:scale-150 hover:rotate-6"
             >
               <Mail size={24} />
             </a>
