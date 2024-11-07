@@ -240,7 +240,7 @@ export const testimonialItems = [
     name: "William Tran",
     proffesion: "Bussiness Analyst @ The Lab Consulting",
     description:
-      "“Lorem ipsum odor amet, consectetuer adipiscing elit. Habitasse nullam nullam mauris hendrerit viverra donec parturient fames? Habitasse neque nec viverra lobortis tincidunt morbi. Pulvinar ligula euismod tempus lacinia habitasse ligula platea etiam. Tempor imperdiet bibendum inceptos pellentesque luctus per mi blandit. Congue potenti fusce praesent, erat a habitant erat eget. Tempor pretium malesuada nibh habitant finibus sollicitudin primis. Luctus litora accumsan venenatis nisi et egestas.”",
-    image: "/imgs/avatars/default-avatar.jpg",
+      "Thomas is the type of person that all managers dream of hiring. He’s scrupulously reliable and shows great pride in anything he does; it’s simply not within his nature to do things half-heartedly. Additionally, to our organization’s delight, he went above and beyond his regular responsibilities to improve some of our inefficient processes through the clever use of technology. Do yourself a favor and find a way to work with Thomas!",
+    image: "/imgs/avatars/Will-Tran-avatar.png",
   },
 ];
