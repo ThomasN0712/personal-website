@@ -40,7 +40,7 @@ const ProjectCard = ({ project }: { project: ProjectProps }) => {
       </Link>
       <div className="flex-1">
         <h3 className="text-2xl sm:text-3xl font-semibold">{heading}</h3>
-        <div className="mt-4 flex flex-col sm:flex-row justify-between gap-5">
+        <div className="mt-4 flex flex-row justify-between gap-5">
           <div className="min-h-[125px] max-h-[125px] overflow-y-auto">
             <ProjectTechnologiesMini techStack={techStack} />
           </div>
@@ -48,7 +48,7 @@ const ProjectCard = ({ project }: { project: ProjectProps }) => {
             href={`/work/${id}`}
             className="p-3 bg-primary hover:bg-primary/80 transition-colors duration-200 rounded-lg mt-auto self-end"
           >
-            <MoveUpRight className="size-5 sm:size-8 text-[#F3F4F3] dark:text-dark-200" />
+            <MoveUpRight className="size-8 text-[#F3F4F3] dark:text-dark-200" />
           </Link>
         </div>
       </div>

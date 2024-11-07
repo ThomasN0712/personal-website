@@ -224,22 +224,23 @@ export const testimonialItems = [
     proffesion: "Professor at Cal State Long Beach",
     description:
       "“Lorem ipsum odor amet, consectetuer adipiscing elit. Habitasse nullam nullam mauris hendrerit viverra donec parturient fames? Habitasse neque nec viverra lobortis tincidunt morbi. Pulvinar ligula euismod tempus lacinia habitasse ligula platea etiam. Tempor imperdiet bibendum inceptos pellentesque luctus per mi blandit. Congue potenti fusce praesent, erat a habitant erat eget. Tempor pretium malesuada nibh habitant finibus sollicitudin primis. Luctus litora accumsan venenatis nisi et egestas.”",
-    image: "/imgs/avatars/Alex.jpg",
+    image: "/imgs/avatars/default-avatar.jpg",
   },
   {
     id: 2,
-    name: "Michael",
-    proffesion: "Software Engineer",
+    name: "Michael Glider",
+    proffesion:
+      "Manufacturing/Operations Software Engineer @ Collins Aerospace",
     description:
-      "“Lorem ipsum odor amet, consectetuer adipiscing elit. Habitasse nullam nullam mauris hendrerit viverra donec parturient fames? Habitasse neque nec viverra lobortis tincidunt morbi. Pulvinar ligula euismod tempus lacinia habitasse ligula platea etiam. Tempor imperdiet bibendum inceptos pellentesque luctus per mi blandit. Congue potenti fusce praesent, erat a habitant erat eget. Tempor pretium malesuada nibh habitant finibus sollicitudin primis. Luctus litora accumsan venenatis nisi et egestas.”",
-    image: "/imgs/avatars/Alex.jpg",
+      'Collaborating with Thomas on our project has been a rewarding experience. Their ability to quickly adapt to new challenges and technologies kept everything moving forward seamlessly. Thomas approaches each task with a diligent focus, ensuring every piece of code meets high standards of quality and reliability. Their commitment to excellence and quick learning make them an invaluable asset to any team."',
+    image: "/imgs/avatars/Michael-Glider-avatar.jpeg",
   },
   {
     id: 1,
     name: "William Tran",
-    proffesion: "Bussiness Analyst at The Lab Consulting",
+    proffesion: "Bussiness Analyst @ The Lab Consulting",
     description:
       "“Lorem ipsum odor amet, consectetuer adipiscing elit. Habitasse nullam nullam mauris hendrerit viverra donec parturient fames? Habitasse neque nec viverra lobortis tincidunt morbi. Pulvinar ligula euismod tempus lacinia habitasse ligula platea etiam. Tempor imperdiet bibendum inceptos pellentesque luctus per mi blandit. Congue potenti fusce praesent, erat a habitant erat eget. Tempor pretium malesuada nibh habitant finibus sollicitudin primis. Luctus litora accumsan venenatis nisi et egestas.”",
-    image: "/imgs/avatars/Alex.jpg",
+    image: "/imgs/avatars/default-avatar.jpg",
   },
 ];

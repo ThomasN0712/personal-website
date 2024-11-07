@@ -36,14 +36,17 @@ const Testimonials = () => {
 
   return (
     <div ref={ref} className="mb-32 space-y-10">
-      <motion.div
-        key={`description-${curIndex}`}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1.5 }}
-      >
-        <AnimatedParagraph paragraph={currentTestimonial.description} />
-      </motion.div>
+      <div className="flex items-start gap-4">
+        <div className="text-primary text-9xl font-bold leading-none">“</div>
+        <motion.div
+          key={`description-${curIndex}`}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1.5 }}
+        >
+          <AnimatedParagraph paragraph={currentTestimonial.description} />
+        </motion.div>
+      </div>
 
       <motion.div
         className="flex items-center justify-center gap-4"
@@ -73,7 +76,7 @@ const Testimonials = () => {
             onClick={() => goToTestimonial(i)}
             className={`w-4 h-4 ${
               curIndex === i
-                ? "bg-primary duration-1000"
+                ? "w-10 h-4 bg-primary duration-1000"
                 : "bg-[#333333] hover:bg-[#444444] duration-300"
             } rounded-full transition-colors`}
           ></button>
