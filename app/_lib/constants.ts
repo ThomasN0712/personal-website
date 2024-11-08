@@ -373,6 +373,6 @@ export const testimonialItems = [
     proffesion: "Bussiness Analyst @ The Lab Consulting",
     description:
       "Thomas is the type of person that all managers dream of hiring. He’s scrupulously reliable and shows great pride in anything he does; it’s simply not within his nature to do things half-heartedly. Additionally, to our organization’s delight, he went above and beyond his regular responsibilities to improve some of our inefficient processes through the clever use of technology. Do yourself a favor and find a way to work with Thomas!",
-    image: "/imgs/avatars/Will-Tran-avatar.jpeg",
+    image: "/imgs/avatars/Will-Tran-avatar.jpg",
   },
 ];
