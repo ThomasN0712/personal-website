@@ -126,11 +126,6 @@ export const techCardsItems = [
   },
   {
     id: 1,
-    name: "NodeJS",
-    imageUrl: "/imgs/logos/nodejs.svg",
-  },
-  {
-    id: 1,
     name: "MongoDB",
     imageUrl: "/imgs/logos/mongodb.svg",
   },
@@ -217,7 +212,7 @@ export const techCardsItems = [
   },
   {
     id: 4,
-    name: "Google Workspace",
+    name: "Workspace",
     imageUrl: "/imgs/logos/google-workspace.svg",
   },
   {
