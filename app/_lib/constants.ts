@@ -79,9 +79,13 @@ export const educationData: Education[] = [
     dates: "Aug 2022 - Dec 2024",
     description: [
       "GPA: 4.0",
-      "Completed a senior design project on E2EE chat app.",
+      "Developed a senior design project: an end-to-end encrypted (E2EE) chat application",
+      "4-time President's List honoree",
+      "Published 2 research papers on large language models (LLMs) and educational technology",
+      "2024 CSULB Student Summer Research Award recipient, selected for an 8-week full-time research grant",
+      "2nd Place, 36th Annual CSULB Student Research Competition",
     ],
-    tags: ["Dean's List", "Senior Design Project"],
+    tags: [""],
   },
   {
     id: 2,
@@ -90,10 +94,10 @@ export const educationData: Education[] = [
     degree: "Associate of Science in Computer Science",
     dates: "Aug 2020 - May 2022",
     description: [
-      "Graduated with honors, maintaining a GPA of 3.8.",
-      "Completed BlockChain Project with professor Penn Wu",
+      "Graduated with honors",
+      "Completed a blockchain project under the mentorship of Dr. Penn Wu, focusing on decentralized applications.",
     ],
-    tags: ["Dean's List", "Senior Design Project"],
+    tags: [""],
   },
 ];
 
@@ -241,6 +245,6 @@ export const testimonialItems = [
     proffesion: "Bussiness Analyst @ The Lab Consulting",
     description:
       "Thomas is the type of person that all managers dream of hiring. He’s scrupulously reliable and shows great pride in anything he does; it’s simply not within his nature to do things half-heartedly. Additionally, to our organization’s delight, he went above and beyond his regular responsibilities to improve some of our inefficient processes through the clever use of technology. Do yourself a favor and find a way to work with Thomas!",
-    image: "/imgs/avatars/Will-Tran-avatar.png",
+    image: "/imgs/avatars/Will-Tran-avatar.jpeg",
   },
 ];
