@@ -15,10 +15,10 @@ const TechCard = ({
     <div className="flex flex-col items-center gap-1">
       <Image
         src={imageUrl}
-        width={40}
-        height={40}
+        width={50}
+        height={50}
         alt={`${name} logo`}
-        className={`size-8 ${darkModeInvert ? "dark:invert" : ""}`}
+        className={`size-10 ${darkModeInvert ? "dark:invert" : ""}`}
       />
       <p className="text-sm text-center font-medium">{name}</p>
     </div>
