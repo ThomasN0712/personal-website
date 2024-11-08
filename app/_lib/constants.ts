@@ -143,6 +143,7 @@ export const techCardsItems = [
   // id 2: Frontend & Design
   // id 3: Cloud & DevOps
   // id 4: Other
+  // https://www.vectorlogo.zone/
 
   // Backend
   {
@@ -350,7 +351,7 @@ export const researchPapers = [
 
 export const testimonialItems = [
   {
-    id: 1,
+    id: 2,
     name: "Dr. Hossein Sayadi",
     proffesion: "Professor at Cal State Long Beach",
     description:
@@ -358,7 +359,7 @@ export const testimonialItems = [
     image: "/imgs/avatars/default-avatar.jpg",
   },
   {
-    id: 2,
+    id: 1,
     name: "Michael Glider",
     proffesion:
       "Manufacturing/Operations Software Engineer @ Collins Aerospace",
