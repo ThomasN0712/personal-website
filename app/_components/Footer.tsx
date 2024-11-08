@@ -48,9 +48,9 @@ const Footer = () => {
         </div>
 
         {/* Right Column */}
-        <div className="flex justify-between gap-0 sm:gap-16">
+        <div className="flex justify-between gap-0 gap-6 sm:gap-16">
           <ul className="space-y-2.5 relative z-10 text-sm sm:text-base">
-            <li className="text-base sm:text-lg font-semibold">Navigate</li>
+            <li className="text-lg sm:text-lg font-semibold">Navigate</li>
             <li className="text-dark-200/60 hover:text-dark-200 dark:text-white/50 dark:hover:text-white">
               <Link href="/">Home</Link>
             </li>
