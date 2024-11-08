@@ -6,9 +6,10 @@ const TechCard = ({
   cardInfo: {
     name: string;
     imageUrl: string;
+    darkModeInvert: boolean;
   };
 }) => {
-  const { name, imageUrl } = cardInfo;
+  const { name, imageUrl, darkModeInvert } = cardInfo;
 
   return (
     <div className="flex flex-col items-center gap-1">
@@ -17,7 +18,7 @@ const TechCard = ({
         width={40}
         height={40}
         alt={`${name} logo`}
-        className={`size-8 ${name === "NextJS" ? "dark:invert" : ""}`}
+        className={`size-8 ${darkModeInvert ? "dark:invert" : ""}`}
       />
       <p className="text-sm text-center font-medium">{name}</p>
     </div>

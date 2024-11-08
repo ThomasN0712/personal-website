@@ -113,21 +113,25 @@ export const techCardsItems = [
     id: 1,
     name: "Python",
     imageUrl: "/imgs/logos/python.svg",
+    darkModeInvert: false,
   },
   {
     id: 1,
     name: "C++",
     imageUrl: "/imgs/logos/cpp.svg",
+    darkModeInvert: false,
   },
   {
     id: 1,
     name: "Java",
     imageUrl: "/imgs/logos/java.svg",
+    darkModeInvert: false,
   },
   {
     id: 1,
     name: "MongoDB",
     imageUrl: "/imgs/logos/mongodb.svg",
+    darkModeInvert: false,
   },
 
   // Frontend & Design
@@ -135,46 +139,55 @@ export const techCardsItems = [
     id: 2,
     name: "React",
     imageUrl: "/imgs/logos/react.svg",
+    darkModeInvert: false,
   },
   {
     id: 2,
     name: "TypeScript",
     imageUrl: "/imgs/logos/typescript.svg",
+    darkModeInvert: false,
   },
   {
     id: 2,
     name: "Next.js",
     imageUrl: "/imgs/logos/nextjs.svg",
+    darkModeInvert: true, // Invert in dark mode
   },
   {
     id: 2,
     name: "JavaScript",
     imageUrl: "/imgs/logos/javascript.svg",
+    darkModeInvert: false,
   },
   {
     id: 2,
     name: "HTML",
     imageUrl: "/imgs/logos/html.svg",
+    darkModeInvert: false,
   },
   {
     id: 2,
     name: "CSS",
     imageUrl: "/imgs/logos/css.svg",
+    darkModeInvert: false,
   },
   {
     id: 2,
     name: "Tailwind",
     imageUrl: "/imgs/logos/tailwind.svg",
+    darkModeInvert: false,
   },
   {
     id: 2,
     name: "Figma",
     imageUrl: "/imgs/logos/figma-logo.svg",
+    darkModeInvert: false,
   },
   {
     id: 2,
     name: "Ionic",
     imageUrl: "/imgs/logos/ionic.svg",
+    darkModeInvert: false,
   },
 
   // Cloud & DevOps
@@ -182,21 +195,25 @@ export const techCardsItems = [
     id: 3,
     name: "AWS",
     imageUrl: "/imgs/logos/aws.svg",
+    darkModeInvert: false,
   },
   {
     id: 3,
     name: "Docker",
     imageUrl: "/imgs/logos/docker.svg",
+    darkModeInvert: false,
   },
   {
     id: 3,
     name: "Google Cloud",
     imageUrl: "/imgs/logos/googlecloud.svg",
+    darkModeInvert: false,
   },
   {
     id: 3,
     name: "Vercel",
     imageUrl: "/imgs/logos/vercel.svg",
+    darkModeInvert: true, // Invert in dark mode
   },
 
   // Other
@@ -204,21 +221,25 @@ export const techCardsItems = [
     id: 4,
     name: "Slack",
     imageUrl: "/imgs/logos/slack.svg",
+    darkModeInvert: false,
   },
   {
     id: 4,
     name: "Jira",
     imageUrl: "/imgs/logos/jira.svg",
+    darkModeInvert: false,
   },
   {
     id: 4,
     name: "Workspace",
     imageUrl: "/imgs/logos/google-workspace.svg",
+    darkModeInvert: false,
   },
   {
     id: 4,
     name: "ChatGPT",
     imageUrl: "/imgs/logos/chatgpt.svg",
+    darkModeInvert: true, // Invert in dark mode
   },
 ];
 
