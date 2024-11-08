@@ -269,7 +269,7 @@ export const techCardsItems = [
     id: 4,
     name: "Linux",
     imageUrl: "/imgs/logos/linux.svg",
-    darkModeInvert: true, //
+    darkModeInvert: false,
   },
   {
     id: 4,
