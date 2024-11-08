@@ -102,53 +102,128 @@ export const educationData: Education[] = [
 ];
 
 export const techCardsItems = [
+  // Dictionary of IDs:
+  // id 1: Backend
+  // id 2: Frontend & Design
+  // id 3: Cloud & DevOps
+  // id 4: Other
+
+  // Backend
   {
+    id: 1,
     name: "Python",
-    description: "Programming Language",
     imageUrl: "/imgs/logos/python.svg",
-    bgColor: "bg-[#3776AB]/20",
   },
   {
+    id: 1,
     name: "C++",
-    description: "Programming Language",
     imageUrl: "/imgs/logos/cpp.svg",
-    bgColor: "bg-[#00599C]/20",
   },
   {
+    id: 1,
     name: "Java",
-    description: "Programming Language",
     imageUrl: "/imgs/logos/java.svg",
-    bgColor: "bg-[#00599C]/20",
   },
   {
+    id: 1,
+    name: "NodeJS",
+    imageUrl: "/imgs/logos/nodejs.svg",
+  },
+  {
+    id: 1,
+    name: "MongoDB",
+    imageUrl: "/imgs/logos/mongodb.svg",
+  },
+
+  // Frontend & Design
+  {
+    id: 2,
     name: "React",
-    description: "JavaScript Library",
     imageUrl: "/imgs/logos/react.svg",
-    bgColor: "bg-[#61DAFB]/20",
   },
   {
+    id: 2,
     name: "TypeScript",
-    description: "JavaScript but better",
     imageUrl: "/imgs/logos/typescript.svg",
-    bgColor: "bg-[#3178C6]/20",
   },
   {
-    name: "Git",
-    description: "Version control",
-    imageUrl: "/imgs/logos/git.svg",
-    bgColor: "bg-[#F1502F]/20",
+    id: 2,
+    name: "Next.js",
+    imageUrl: "/imgs/logos/nextjs.svg",
   },
   {
-    name: "ChatGPT",
-    description: "Large Language Model",
-    imageUrl: "/imgs/logos/chatgpt.svg",
-    bgColor: "bg-[#00A67E]/20",
+    id: 2,
+    name: "JavaScript",
+    imageUrl: "/imgs/logos/javascript.svg",
   },
   {
+    id: 2,
+    name: "HTML",
+    imageUrl: "/imgs/logos/html.svg",
+  },
+  {
+    id: 2,
+    name: "CSS",
+    imageUrl: "/imgs/logos/css.svg",
+  },
+  {
+    id: 2,
+    name: "Tailwind",
+    imageUrl: "/imgs/logos/tailwind.svg",
+  },
+  {
+    id: 2,
     name: "Figma",
-    description: "Design Tool",
     imageUrl: "/imgs/logos/figma-logo.svg",
-    bgColor: "bg-[#0ACF83]/20",
+  },
+  {
+    id: 2,
+    name: "Ionic",
+    imageUrl: "/imgs/logos/ionic.svg",
+  },
+
+  // Cloud & DevOps
+  {
+    id: 3,
+    name: "AWS",
+    imageUrl: "/imgs/logos/aws.svg",
+  },
+  {
+    id: 3,
+    name: "Docker",
+    imageUrl: "/imgs/logos/docker.svg",
+  },
+  {
+    id: 3,
+    name: "Google Cloud",
+    imageUrl: "/imgs/logos/googlecloud.svg",
+  },
+  {
+    id: 3,
+    name: "Vercel",
+    imageUrl: "/imgs/logos/vercel.svg",
+  },
+
+  // Other
+  {
+    id: 4,
+    name: "Slack",
+    imageUrl: "/imgs/logos/slack.svg",
+  },
+  {
+    id: 4,
+    name: "Jira",
+    imageUrl: "/imgs/logos/jira.svg",
+  },
+  {
+    id: 4,
+    name: "Google Workspace",
+    imageUrl: "/imgs/logos/google-workspace.svg",
+  },
+  {
+    id: 4,
+    name: "ChatGPT",
+    imageUrl: "/imgs/logos/chatgpt.svg",
   },
 ];
 
