@@ -12,7 +12,7 @@ const AnimatedParagraph = ({ paragraph }: { paragraph: string }) => {
 
   return (
     <motion.p
-      className="mx-auto text-xl min-[32.5rem]:text-[1.375rem] sm:text-2xl lg:text-3xl font-medium italic lg:leading-10 text-center max-w-[68.625rem]"
+      className="mx-auto text-xl min-[32.5rem]:text-[1.375rem] sm:text-2xl lg:text-3xl font-ml italic lg:leading-10 text-center max-w-[68.625rem]"
       ref={element}
       style={{ opacity: scrollYProgress }}
     >

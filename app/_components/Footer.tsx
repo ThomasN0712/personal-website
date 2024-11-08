@@ -5,7 +5,8 @@ import Image from "next/image";
 const Footer = () => {
   return (
     <div>
-      <div className="mt-16 p-10 border-t border-dark-200 dark:border-white/10 flex flex-col md:flex-row justify-between gap-10 md:gap-0">
+      <div className="mt-16 p-10 border-t border-dark-200 dark:border-white/10 flex flex-col md:flex-row justify-between items-center gap-10 md:gap-0">
+        {/* Left Column */}
         <div className="space-y-2.5">
           <h3 className="text-xl font-bold relative z-10">Thomas Nguyen</h3>
           <p className="text-dark-200/70 dark:text-stone-200/70 relative z-10">
@@ -13,6 +14,30 @@ const Footer = () => {
           </p>
         </div>
 
+        {/* Middle Column */}
+        <div className="flex items-center space-x-2.5">
+          <span className="text-lg text-dark-200/70 dark:text-stone-200/70 relative z-10">
+            Made using Next.js
+          </span>
+          <Image
+            src="/imgs/logos/nextjs.svg"
+            alt="Next.js Logo"
+            width={40}
+            height={40}
+            className="invert-0 dark:invert"
+          />
+          <span className="text-lg text-dark-200/70 dark:text-stone-200/70 relative z-10">
+            and React
+          </span>
+          <Image
+            src="/imgs/logos/react.svg"
+            alt="React Logo"
+            width={40}
+            height={40}
+          />
+        </div>
+
+        {/* Right Column */}
         <div className="flex justify-between gap-0 sm:gap-16">
           <ul className="space-y-2.5 relative z-10 text-sm sm:text-base">
             <li className="text-base sm:text-lg font-semibold">Navigate</li>
@@ -43,11 +68,18 @@ const Footer = () => {
             </li>
             <li className="flex items-center text-dark-200/60 hover:text-dark-200 dark:text-white/50 dark:hover:text-white">
               <Image
-                src="/imgs/logos/github-dark-logo.svg" // Adjust the path if needed
+                src="/imgs/logos/github-dark-logo.svg"
                 alt="GitHub"
                 width={20}
                 height={20}
-                className="mr-2"
+                className="mr-2 dark:hidden"
+              />
+              <Image
+                src="/imgs/logos/github-logo.svg"
+                alt="GitHub"
+                width={20}
+                height={20}
+                className="mr-2 hidden dark:block"
               />
               <Link href="https://github.com/ThomasN0712" target="_blank">
                 Github

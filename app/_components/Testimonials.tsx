@@ -74,10 +74,10 @@ const Testimonials = () => {
           <button
             key={i}
             onClick={() => goToTestimonial(i)}
-            className={`w-4 h-4 ${
+            className={`h-4 ${
               curIndex === i
-                ? "w-10 h-4 bg-primary duration-1000"
-                : "bg-[#333333] hover:bg-[#444444] duration-300"
+                ? "w-9 bg-primary duration-1000"
+                : "w-4 bg-[#333333] hover:bg-[#444444] duration-300"
             } rounded-full transition-colors`}
           ></button>
         ))}

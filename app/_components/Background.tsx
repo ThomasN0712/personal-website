@@ -62,7 +62,6 @@ const Background = () => {
 
       <div className="relative border border-gray-500 rounded-lg p-4 opacity-80">
         <div className="absolute left-12 md:left-14 top-0 bottom-0 w-0.5 bg-gray-500 opacity 80"></div>{" "}
-        {/* Timeline line */}
         <div className="ml-12 space-y-8">
           {activeTab === "Experience" &&
             experienceData.map((experience) => (
