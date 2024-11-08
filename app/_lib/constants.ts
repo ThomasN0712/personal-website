@@ -267,6 +267,12 @@ export const techCardsItems = [
   },
   {
     id: 4,
+    name: "Linux",
+    imageUrl: "/imgs/logos/linux.svg",
+    darkModeInvert: true, //
+  },
+  {
+    id: 4,
     name: "ChatGPT",
     imageUrl: "/imgs/logos/chatgpt.svg",
     darkModeInvert: true, // Invert in dark mode
