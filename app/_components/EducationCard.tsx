@@ -30,10 +30,10 @@ const EducationCard: React.FC<EducationCardProps> = ({ education }) => (
     <div className="bg-gray-100 dark:bg-gray-800 rounded-lg shadow-md p-4 w-full">
       <div>
         <h3 className="text-lg font-bold">{education.institution}</h3>
-        <p className="text-sm text-gray-500">{education.dates}</p>
+        <p className="text-sm text-gray-300">{education.dates}</p>
         <p className="text-sm font-semibold">{education.degree}</p>
       </div>
-      <ul className="list-disc ml-8 mt-2 space-y-1 text-gray-700 dark:text-gray-300">
+      <ul className="list-disc ml-8 mt-2 space-y-1 text-gray-700 dark:text-gray-100">
         {education.description.map((item, index) => (
           <li key={index}>{item}</li>
         ))}

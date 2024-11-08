@@ -30,12 +30,12 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => (
     <div className="bg-gray-100 dark:bg-gray-800 rounded-lg shadow-md p-4 w-full">
       <div>
         <h3 className="text-lg font-bold">{experience.company}</h3>
-        <p className="text-sm text-gray-200 text-gray-700 dark:text-gray-400">
+        <p className="text-sm text-gray-200 text-gray-700 dark:text-gray-300">
           {experience.dates}
         </p>
         <p className="text-sm font-semibold">{experience.position}</p>
       </div>
-      <ul className="list-disc ml-8 mt-2 space-y-1 text-gray-700 dark:text-gray-400">
+      <ul className="list-disc ml-8 mt-2 space-y-1 text-gray-700 dark:text-gray-100">
         {experience.description.map((item, index) => (
           <li key={index}>{item}</li>
         ))}
