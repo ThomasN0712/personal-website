@@ -8,22 +8,26 @@ const categories = [
   {
     id: 1,
     title: "Backend",
-    description: "I love problem-solving and building complex systems...",
+    description:
+      "I’m building skills in solving complex problems, automating tasks, and designing scalable backend systems that enhance user experiences.",
   },
   {
     id: 2,
     title: "Frontend & Design",
-    description: "I'm passionate about design, animation, and interactions...",
+    description:
+      "I'm enthusiastic about learning to create clean, user-friendly designs that balance functionality and aesthetics for intuitive interfaces.",
   },
   {
     id: 3,
     title: "Cloud & DevOps",
-    description: "I have managed AWS, GCP, and other cloud services...",
+    description:
+      "I’m gaining hands-on experience with cloud deployments and DevOps tools, working towards optimizing workflows for efficient project management.",
   },
   {
     id: 4,
-    title: "Management",
-    description: "I have worked with multiple clients and stakeholders...",
+    title: "Other",
+    description:
+      "These are additional tools I’m using to streamline tasks and improve productivity in my daily projects.",
   },
 ];
 
@@ -38,7 +42,7 @@ const Skills = () => {
           transition={{ duration: 0.5, delay: 0.25 }}
           className="text-3xl min-[430px]:text-4xl md:text-5xl font-bold dark:text-stone-200"
         >
-          Current technologies
+          Technologies I Use
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, x: -90 }}
@@ -47,9 +51,9 @@ const Skills = () => {
           transition={{ duration: 0.5, delay: 0.25 }}
           className="text-lg min-[430px]:text-xl max-w-lg md:max-w-3xl text-dark-200 dark:text-stone-200"
         >
-          I have expertise in various modern technologies that enable me to
-          develop highly functional solutions. Here are some of the key
-          technologies I work with.
+          I’m building a solid foundation across a range of modern technologies
+          to develop practical and reliable solutions. Here are the key tools
+          and frameworks I'm currently working with.
         </motion.p>
       </div>
 

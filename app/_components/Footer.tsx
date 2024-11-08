@@ -16,24 +16,34 @@ const Footer = () => {
 
         {/* Middle Column */}
         <div className="flex items-center space-x-2.5">
-          <span className="text-lg text-dark-200/70 dark:text-stone-200/70 relative z-10">
+          <span className="text-base text-dark-200/70 dark:text-stone-200/70 relative z-10">
             Made using Next.js
           </span>
           <Image
             src="/imgs/logos/nextjs.svg"
             alt="Next.js Logo"
-            width={40}
-            height={40}
+            width={30}
+            height={30}
             className="invert-0 dark:invert"
           />
-          <span className="text-lg text-dark-200/70 dark:text-stone-200/70 relative z-10">
-            and React
+          <span className="text-base text-dark-200/70 dark:text-stone-200/70 relative z-10">
+            , React
           </span>
           <Image
             src="/imgs/logos/react.svg"
             alt="React Logo"
-            width={40}
-            height={40}
+            width={30}
+            height={30}
+          />
+          <span className="text-base text-dark-200/70 dark:text-stone-200/70 relative z-10">
+            and Vercel
+          </span>
+          <Image
+            src="/imgs/logos/vercel.svg"
+            alt="React Logo"
+            width={30}
+            height={30}
+            className="invert-0 dark:invert"
           />
         </div>
 

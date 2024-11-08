@@ -229,12 +229,6 @@ export const techCardsItems = [
   // Cloud & DevOps
   {
     id: 3,
-    name: "AWS",
-    imageUrl: "/imgs/logos/aws.svg",
-    darkModeInvert: false,
-  },
-  {
-    id: 3,
     name: "Docker",
     imageUrl: "/imgs/logos/docker.svg",
     darkModeInvert: false,
