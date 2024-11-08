@@ -18,6 +18,42 @@ export interface Education {
   tags?: string[];
 }
 
+export interface TechCardItem {
+  id: number; // 1: Backend, 2: Frontend & Design, 3: Cloud & DevOps, 4: Other
+  name: string;
+  imageUrl: string;
+  darkModeInvert: boolean;
+}
+
+export interface PortfolioProject {
+  id: string;
+  heading: string;
+  subheading: string;
+  description: string;
+  imageUrl: string;
+  techStack: string[];
+  liveDemoUrl: string;
+  sourceCodeUrl: string;
+}
+
+export interface ResearchPaper {
+  id: string;
+  title: string;
+  description?: string;
+  authors: string;
+  publicationDate: string;
+  imageUrl: string;
+  link: string;
+}
+
+export interface Testimonial {
+  id: number;
+  name: string;
+  profession: string;
+  description: string;
+  image: string;
+}
+
 export const experienceData: Experience[] = [
   {
     id: 1,
