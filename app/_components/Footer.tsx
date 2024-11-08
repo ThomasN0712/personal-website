@@ -15,7 +15,7 @@ const Footer = () => {
         </div>
 
         {/* Middle Column */}
-        <div className="flex items-center space-x-2.5">
+        <div className="hidden sm:flex items-center space-x-2.5">
           <span className="text-base text-dark-200/70 dark:text-stone-200/70 relative z-10">
             Made using Next.js
           </span>
@@ -27,7 +27,7 @@ const Footer = () => {
             className="invert-0 dark:invert"
           />
           <span className="text-base text-dark-200/70 dark:text-stone-200/70 relative z-10">
-            , React
+            React
           </span>
           <Image
             src="/imgs/logos/react.svg"
