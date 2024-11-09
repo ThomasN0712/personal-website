@@ -251,20 +251,8 @@ export const techCardsItems: TechCardItem[] = [
   // Other
   {
     id: 4,
-    name: "Slack",
-    imageUrl: "/imgs/logos/slack.svg",
-    darkModeInvert: false,
-  },
-  {
-    id: 4,
     name: "Jira",
     imageUrl: "/imgs/logos/jira.svg",
-    darkModeInvert: false,
-  },
-  {
-    id: 4,
-    name: "Workspace",
-    imageUrl: "/imgs/logos/google-workspace.svg",
     darkModeInvert: false,
   },
   {
