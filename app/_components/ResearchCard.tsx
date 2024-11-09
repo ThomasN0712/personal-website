@@ -55,7 +55,7 @@ const ResearchCard = ({ paper }: { paper: ResearchPaperProps }) => {
           {authors} - {publicationDate}
         </p>
         <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">
-          Conference: {conference}
+          Published in {conference}
         </p>
       </div>
       <div className="mt-1 pt-0 pb-2 flex items-center justify-between max-h-[30px]">
