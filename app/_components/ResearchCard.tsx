@@ -8,16 +8,25 @@ import { motion } from "framer-motion";
 interface ResearchPaperProps {
   id: string;
   title: string;
-  description: string;
+  description?: string;
   authors: string;
   publicationDate: string;
+  conference: string;
   imageUrl: string;
   link: string;
 }
 
 const ResearchCard = ({ paper }: { paper: ResearchPaperProps }) => {
-  const { id, title, description, authors, publicationDate, imageUrl, link } =
-    paper;
+  const {
+    id,
+    title,
+    description,
+    authors,
+    publicationDate,
+    conference,
+    imageUrl,
+    link,
+  } = paper;
 
   return (
     <motion.div
@@ -44,6 +53,9 @@ const ResearchCard = ({ paper }: { paper: ResearchPaperProps }) => {
         <h3 className="text-2xl sm:text-2xl font-semibold">{title}</h3>
         <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">
           {authors} - {publicationDate}
+        </p>
+        <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">
+          Conference: {conference}
         </p>
       </div>
       <div className="mt-1 pt-0 pb-2 flex items-center justify-between max-h-[30px]">

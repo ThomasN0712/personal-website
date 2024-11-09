@@ -42,6 +42,7 @@ export interface ResearchPaper {
   description?: string;
   authors: string;
   publicationDate: string;
+  conference: string;
   imageUrl: string;
   link: string;
 }
@@ -137,7 +138,7 @@ export const educationData: Education[] = [
   },
 ];
 
-export const techCardsItems = [
+export const techCardsItems: TechCardItem[] = [
   // Dictionary of IDs:
   // id 1: Backend
   // id 2: Frontend & Design
@@ -280,7 +281,7 @@ export const techCardsItems = [
   },
 ];
 
-export const portfolioProjects = [
+export const portfolioProjects: PortfolioProject[] = [
   {
     id: "wraith",
     heading: "Project Wraith",
@@ -315,14 +316,14 @@ export const portfolioProjects = [
   },
 ];
 
-export const researchPapers = [
+export const researchPapers: ResearchPaper[] = [
   {
     id: "1",
     title:
       "ChatGPT vs. Gemini: Comparative Evaluation in Cybersecurity Education with Prompt Engineering Impact",
-    description: "",
     authors: "Thomas Nguyen, Hossein Sayadi",
     publicationDate: "2024",
+    conference: "IEEE Frontiers in Education Conference",
     imageUrl: "/imgs/projects/chatgpt-gemini-research-paper.png",
     link: "https://example.com/paper1",
   },
@@ -330,10 +331,10 @@ export const researchPapers = [
     id: "2",
     title:
       "The AI Companion in Education: Analyzing the Pedagogical Potential of ChatGPT in Computer Science and Engineering",
-    description: "",
     authors:
       "Zhangying He, Thomas Nguyen, Tahereh Miari, Mehrdad Aliasgari, Setareh Rafatirad, Hossein Sayadi",
     publicationDate: "2024",
+    conference: "IEEE Global Engineering Education Conference",
     imageUrl: "/imgs/projects/ai-companion-research-paper.png",
     link: "https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10578820",
   },
