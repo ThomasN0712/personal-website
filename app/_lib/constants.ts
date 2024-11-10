@@ -167,6 +167,12 @@ export const techCardsItems: TechCardItem[] = [
   },
   {
     id: 1,
+    name: "PostgreSQL",
+    imageUrl: "/imgs/logos/postgresql.svg",
+    darkModeInvert: false,
+  },
+  {
+    id: 1,
     name: "MongoDB",
     imageUrl: "/imgs/logos/mongodb.svg",
     darkModeInvert: false,
