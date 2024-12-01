@@ -58,6 +58,18 @@ export interface Testimonial {
 export const experienceData: Experience[] = [
   {
     id: 1,
+    company: "Archi Studies",
+    logo: "/imgs/logos/archi-logo.svg",
+    position: "Software Developer Intern",
+    dates: "Oct 2024 - Present",
+    description: [
+      "Engineered a responsive front-end using React, JavaScript, and CSS for seamless cross-device user experience.",
+      "Designed dynamic interfaces with interactive components and animations to enhance engagement.",
+      "Collaborated with the team to ensure seamless integration and functionality across all platform components.",
+    ],
+  },
+  {
+    id: 2,
     company: "Cal State Long Beach",
     logo: "/imgs/logos/csulb-logo.svg",
     position: "Teaching Assistant",
@@ -69,7 +81,7 @@ export const experienceData: Experience[] = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     company: "Office of Research Development at CSULB",
     logo: "/imgs/logos/csulb-logo.svg",
     position: "Research Assistant",
@@ -81,7 +93,7 @@ export const experienceData: Experience[] = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     company: "Team Disney Anaheim",
     logo: "/imgs/logos/disneyland-logo.svg",
     position: "Media Event Technical Intern",
@@ -93,7 +105,7 @@ export const experienceData: Experience[] = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     company: "Au Lac Plant Base Cuisine",
     logo: "/imgs/logos/aulac-logo.svg",
     position: "Manager",
@@ -324,6 +336,7 @@ export const portfolioProjects: PortfolioProject[] = [
       "PostgreSQL",
       "Vercel",
       "Supabase",
+      "Render",
     ],
     liveDemoUrl: "https://www.csulbdining.com/",
     sourceCodeUrl: "not-found",
@@ -335,7 +348,7 @@ export const portfolioProjects: PortfolioProject[] = [
     description:
       "Developed a responsive front-end using React, JavaScript, and CSS for seamless cross-device experiences. Designed dynamic interfaces with animations and interactive components to boost engagement. Collaborated with the team to integrate features and ensure cross-platform functionality.",
     imageUrl: "/imgs/projects/portfolio-archi-studies.png",
-    techStack: ["React", "JavaScript", "CSS", "Framer Motion", "GitHub"],
+    techStack: ["React", "JavaScript", "CSS", "Docker", "MongoDB"],
     liveDemoUrl: "https://archistudies.com/app",
     sourceCodeUrl: "not-found",
   },

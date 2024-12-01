@@ -1,6 +1,6 @@
 "use client";
 
-import AnimatedParagraph from "@/app/_components/AnimatedParagraph";
+import AnimatedParagraph from "@/app/_components/ui/AnimatedParagraph";
 import { testimonialItems } from "@/app/_lib/constants";
 import { motion } from "framer-motion";
 import Image from "next/image";

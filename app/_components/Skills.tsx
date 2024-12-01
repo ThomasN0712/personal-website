@@ -37,10 +37,10 @@ const Skills = () => {
     <div className="relative z-0" id="about">
       {/* FlickeringGrid Background */}
       <FlickeringGrid
-        className="absolute inset-0 z-0 [mask-image:radial-gradient(500px_circle_at_center,white,transparent)]"
+        className="absolute inset-0 z-0 [mask-image:radial-gradient(600px_circle_at_center,white,transparent)]"
         squareSize={4}
-        gridGap={7}
-        color="#60A5FA"
+        gridGap={8}
+        color="#0B9964"
         maxOpacity={0.2}
         flickerChance={0.1}
         height={1000}

@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "framer-motion";
 import { experienceData, educationData } from "@/app/_lib/constants";
 import ExperienceCard from "./ExperienceCard";
 import EducationCard from "./EducationCard";
