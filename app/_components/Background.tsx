@@ -10,9 +10,9 @@ const Background = () => {
   const [activeTab, setActiveTab] = useState("Experience");
 
   return (
-    <div className="relative z-10 py-16 sm:py-24" id="about">
+    <div className="relative z-10" id="about">
       <div className="flex space-x-4 mb-8 justify-center">
-        <div className="relative w-full max-w-lg mt-6">
+        <div className="relative w-full max-w-lg">
           <div className="flex bg-gray-400 dark:bg-gray-800 rounded-lg overflow-hidden">
             {/* Slider Indicator */}
             <div

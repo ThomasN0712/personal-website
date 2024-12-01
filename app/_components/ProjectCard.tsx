@@ -30,13 +30,7 @@ const ProjectCard = ({ project }: { project: ProjectProps }) => {
       className="bg-[#F3F4F3] dark:bg-dark-200 rounded-lg p-4 sm:p-8 space-y-8 relative flex flex-col"
     >
       <Link href={`/work/${id}`} className="rounded-lg overflow-hidden block">
-        <Image
-          src={imageUrl}
-          width={1000}
-          height={1000}
-          alt={heading}
-          className="hover:scale-110 transition-transform duration-700"
-        />
+        <Image src={imageUrl} width={1000} height={1000} alt={heading} />
       </Link>
       <div className="flex-1">
         <h3 className="text-2xl sm:text-3xl font-semibold">{heading}</h3>
