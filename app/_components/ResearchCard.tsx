@@ -34,7 +34,7 @@ const ResearchCard = ({ paper }: { paper: ResearchPaperProps }) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: 0.25 }}
-      className="bg-[#F3F4F3] dark:bg-dark-200 rounded-lg p-4 sm:p-8 space-y-8 flex flex-col"
+      className="bg-[#F3F4F3] dark:bg-dark-200 rounded-lg p-4 sm:p-8 space-y-8 flex flex-col hover:shadow-md hover:dark:shadow-primary hover:shadow-slate-600"
     >
       <Link
         href={link}
