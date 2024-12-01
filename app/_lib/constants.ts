@@ -345,14 +345,14 @@ export const researchPapers: ResearchPaper[] = [
 ];
 
 export const testimonialItems = [
-  {
-    id: 2,
-    name: "Dr. Hossein Sayadi",
-    proffesion: "Professor at Cal State Long Beach",
-    description:
-      "“Lorem ipsum odor amet, consectetuer adipiscing elit. Habitasse nullam nullam mauris hendrerit viverra donec parturient fames? Habitasse neque nec viverra lobortis tincidunt morbi. Pulvinar ligula euismod tempus lacinia habitasse ligula platea etiam. Tempor imperdiet bibendum inceptos pellentesque luctus per mi blandit. Congue potenti fusce praesent, erat a habitant erat eget. Tempor pretium malesuada nibh habitant finibus sollicitudin primis. Luctus litora accumsan venenatis nisi et egestas.”",
-    image: "/imgs/avatars/default-avatar.jpg",
-  },
+  // {
+  //   id: 2,
+  //   name: "Dr. Hossein Sayadi",
+  //   proffesion: "Professor at Cal State Long Beach",
+  //   description:
+  //     "“Lorem ipsum odor amet, consectetuer adipiscing elit. Habitasse nullam nullam mauris hendrerit viverra donec parturient fames? Habitasse neque nec viverra lobortis tincidunt morbi. Pulvinar ligula euismod tempus lacinia habitasse ligula platea etiam. Tempor imperdiet bibendum inceptos pellentesque luctus per mi blandit. Congue potenti fusce praesent, erat a habitant erat eget. Tempor pretium malesuada nibh habitant finibus sollicitudin primis. Luctus litora accumsan venenatis nisi et egestas.”",
+  //   image: "/imgs/avatars/default-avatar.jpg",
+  // },
   {
     id: 1,
     name: "Michael Glider",
@@ -363,7 +363,7 @@ export const testimonialItems = [
     image: "/imgs/avatars/Michael-Glider-avatar.jpeg",
   },
   {
-    id: 1,
+    id: 2,
     name: "William Tran",
     proffesion: "Bussiness Analyst @ The Lab Consulting",
     description:
