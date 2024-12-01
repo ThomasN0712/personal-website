@@ -253,6 +253,18 @@ export const techCardsItems: TechCardItem[] = [
     imageUrl: "/imgs/logos/vercel.svg",
     darkModeInvert: true, // Invert in dark mode
   },
+  {
+    id: 3,
+    name: "Supabase",
+    imageUrl: "/imgs/logos/supabase.svg",
+    darkModeInvert: false,
+  },
+  {
+    id: 3,
+    name: "Render",
+    imageUrl: "/imgs/logos/render.svg",
+    darkModeInvert: true,
+  },
 
   // Other
   {
@@ -298,6 +310,36 @@ export const portfolioProjects: PortfolioProject[] = [
     sourceCodeUrl: "not-found",
   },
   {
+    id: "dining-hall-menu",
+    heading: "Dining Hall Menu Web App",
+    subheading: "A better dining experience for students",
+    description:
+      "A responsive web application built with Next.js, TypeScript, and Tailwind CSS for dining menu display and allergen filtering. The backend is serverless, developed with FastAPI, PostgreSQL, and hosted on Vercel with Supabase integration. Features include email notifications, daily menu updates, and community ratings to enhance the user experience.",
+    imageUrl: "/imgs/projects/portfolio-dining-hall-menu.png",
+    techStack: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "FastAPI",
+      "PostgreSQL",
+      "Vercel",
+      "Supabase",
+    ],
+    liveDemoUrl: "https://www.csulbdining.com/",
+    sourceCodeUrl: "not-found",
+  },
+  {
+    id: "archi-studies",
+    heading: "Archi Studies",
+    subheading: "Empowering students through collaborative learning",
+    description:
+      "Developed a responsive front-end using React, JavaScript, and CSS for seamless cross-device experiences. Designed dynamic interfaces with animations and interactive components to boost engagement. Collaborated with the team to integrate features and ensure cross-platform functionality.",
+    imageUrl: "/imgs/projects/portfolio-archi-studies.png",
+    techStack: ["React", "JavaScript", "CSS", "Framer Motion", "GitHub"],
+    liveDemoUrl: "https://archistudies.com/app",
+    sourceCodeUrl: "not-found",
+  },
+  {
     id: "personal-website",
     heading: "Personal Website",
     subheading: "A showcase of my projects and skills",
@@ -305,7 +347,7 @@ export const portfolioProjects: PortfolioProject[] = [
       "This personal website was built using modern web technologies to create a responsive, clean, and efficient user experience. Developed with Next.js and React, styled using Tailwind CSS, and enhanced with TypeScript for type safety, this site demonstrates my skills in building functional and visually appealing web applications.",
     imageUrl: "/imgs/projects/portfolio-personal-website.png",
     techStack: ["Next.js", "React", "Tailwind CSS", "TypeScript", "Vercel"],
-    liveDemoUrl: "not-found",
+    liveDemoUrl: "https://www.thomasnguyen.tech/",
     sourceCodeUrl: "not-found",
   },
 ];

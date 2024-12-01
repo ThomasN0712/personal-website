@@ -41,13 +41,7 @@ const ResearchCard = ({ paper }: { paper: ResearchPaperProps }) => {
         target="_blank"
         className="rounded-lg overflow-hidden block"
       >
-        <Image
-          src={imageUrl}
-          width={1000}
-          height={1000}
-          alt={title}
-          className="hover:scale-110 transition-transform duration-700"
-        />
+        <Image src={imageUrl} width={1000} height={1000} alt={title} />
       </Link>
       <div className="flex-1">
         <h3 className="text-2xl sm:text-2xl font-semibold">{title}</h3>
