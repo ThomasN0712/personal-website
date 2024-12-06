@@ -10,8 +10,7 @@ export const metadata: Metadata = {
     template: "Thomas's Website",
     default: "Thomas's Website",
   },
-  description:
-    "",
+  description: "",
 };
 
 export default function RootLayout({

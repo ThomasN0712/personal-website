@@ -1,7 +1,7 @@
 "use client";
 
 import { techCardsItems } from "@/app/_lib/constants";
-import TechCard from "./TechCard";
+import TechCard from "./Card/TechCard";
 import { motion } from "framer-motion";
 import FlickeringGrid from "./ui/FlickeringGrid";
 
@@ -32,7 +32,7 @@ const categories = [
   },
 ];
 
-const Skills = () => {
+const SkillsSection = () => {
   return (
     <div className="relative z-0" id="about">
       {/* FlickeringGrid Background */}
@@ -66,7 +66,7 @@ const Skills = () => {
             transition={{ duration: 0.5, delay: 0.25 }}
             className="text-lg min-[430px]:text-xl max-w-lg md:max-w-3xl text-dark-200 dark:text-stone-200"
           >
-            I’m building a solid foundation across a range of modern
+            I'm building a solid foundation across a range of modern
             technologies to develop practical and reliable solutions. Here are
             the key tools and frameworks I'm currently working with.
           </motion.p>
@@ -99,4 +99,4 @@ const Skills = () => {
   );
 };
 
-export default Skills;
+export default SkillsSection;

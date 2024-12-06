@@ -30,7 +30,7 @@ export interface PortfolioProject {
   heading: string;
   subheading: string;
   description: string;
-  imageUrl: string;
+  images: string[];
   techStack: string[];
   liveDemoUrl: string;
   sourceCodeUrl: string;
@@ -306,7 +306,12 @@ export const portfolioProjects: PortfolioProject[] = [
     subheading: "a snap-chat clone + E2EE",
     description:
       "A responsive, high-performance web application built with a modern tech stack. The frontend, developed using React, Vite, and styled with SCSS, provides an interactive and visually appealing user experience. The backend is powered by Golang, MongoDB, and Redis, ensuring efficient data management and fast server-side processing. With Ionic and Capacitor, the app offers seamless functionality across web and mobile platforms.",
-    imageUrl: "/imgs/projects/portfolio-wraith.png",
+    images: [
+      "/imgs/projects/portfolio-wraith.png",
+      "/imgs/projects/portfolio-wraith-2.png",
+      "/imgs/projects/portfolio-wraith-3.png",
+      "/imgs/projects/portfolio-wraith-4.png",
+    ],
     techStack: [
       "React",
       "Golang",
@@ -327,7 +332,7 @@ export const portfolioProjects: PortfolioProject[] = [
     subheading: "A better dining experience for students",
     description:
       "A responsive web application built with Next.js, TypeScript, and Tailwind CSS for dining menu display and allergen filtering. The backend is serverless, developed with FastAPI, PostgreSQL, and hosted on Vercel with Supabase integration. Features include email notifications, daily menu updates, and community ratings to enhance the user experience.",
-    imageUrl: "/imgs/projects/portfolio-dining-hall-menu.png",
+    images: ["/imgs/projects/portfolio-dining-hall-menu.png"],
     techStack: [
       "Next.js",
       "TypeScript",
@@ -338,8 +343,8 @@ export const portfolioProjects: PortfolioProject[] = [
       "Supabase",
       "Render",
     ],
-    liveDemoUrl: "https://www.csulbdining.com/",
-    sourceCodeUrl: "not-found",
+    liveDemoUrl: "https://www.longbeachmenu.com/",
+    sourceCodeUrl: "https://github.com/ThomasN0712/better-dining-hall-menu",
   },
   {
     id: "archi-studies",
@@ -347,7 +352,7 @@ export const portfolioProjects: PortfolioProject[] = [
     subheading: "Empowering students through collaborative learning",
     description:
       "Developed a responsive front-end using React, JavaScript, and CSS for seamless cross-device experiences. Designed dynamic interfaces with animations and interactive components to boost engagement. Collaborated with the team to integrate features and ensure cross-platform functionality.",
-    imageUrl: "/imgs/projects/portfolio-archi-studies.png",
+    images: ["/imgs/projects/portfolio-archi-studies.png"],
     techStack: ["React", "JavaScript", "CSS", "Docker", "MongoDB"],
     liveDemoUrl: "https://archistudies.com/app",
     sourceCodeUrl: "not-found",
@@ -358,7 +363,7 @@ export const portfolioProjects: PortfolioProject[] = [
     subheading: "A showcase of my projects and skills",
     description:
       "This personal website was built using modern web technologies to create a responsive, clean, and efficient user experience. Developed with Next.js and React, styled using Tailwind CSS, and enhanced with TypeScript for type safety, this site demonstrates my skills in building functional and visually appealing web applications.",
-    imageUrl: "/imgs/projects/portfolio-personal-website.png",
+    images: ["/imgs/projects/portfolio-personal-website.png"],
     techStack: ["Next.js", "React", "Tailwind CSS", "TypeScript", "Vercel"],
     liveDemoUrl: "https://www.thomasnguyen.tech/",
     sourceCodeUrl: "not-found",
@@ -387,27 +392,9 @@ export const researchPapers: ResearchPaper[] = [
     imageUrl: "/imgs/projects/ai-companion-research-paper.png",
     link: "https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10578820",
   },
-  // {
-  //   id: "3",
-  //   title: "Bayesian Networks for Predictive Analysis in Healthcare",
-  //   description:
-  //     "This paper presents the application of Bayesian networks to predict patient outcomes, focusing on probabilistic modeling in health informatics to assist in clinical decision-making.",
-  //   authors: "Thomas Nguyen, Emily Zhang",
-  //   publicationDate: "2024",
-  //   imageUrl: "/images/bayesian-healthcare.jpg",
-  //   link: "https://example.com/paper3",
-  // },
 ];
 
 export const testimonialItems = [
-  // {
-  //   id: 2,
-  //   name: "Dr. Hossein Sayadi",
-  //   proffesion: "Professor at Cal State Long Beach",
-  //   description:
-  //     "“Lorem ipsum odor amet, consectetuer adipiscing elit. Habitasse nullam nullam mauris hendrerit viverra donec parturient fames? Habitasse neque nec viverra lobortis tincidunt morbi. Pulvinar ligula euismod tempus lacinia habitasse ligula platea etiam. Tempor imperdiet bibendum inceptos pellentesque luctus per mi blandit. Congue potenti fusce praesent, erat a habitant erat eget. Tempor pretium malesuada nibh habitant finibus sollicitudin primis. Luctus litora accumsan venenatis nisi et egestas.”",
-  //   image: "/imgs/avatars/default-avatar.jpg",
-  // },
   {
     id: 1,
     name: "Michael Glider",

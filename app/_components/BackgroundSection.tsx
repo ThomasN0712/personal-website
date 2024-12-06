@@ -2,10 +2,10 @@
 
 import { useState } from "react";
 import { experienceData, educationData } from "@/app/_lib/constants";
-import ExperienceCard from "./ExperienceCard";
-import EducationCard from "./EducationCard";
+import ExperienceCard from "./Card/ExperienceCard";
+import EducationCard from "./Card/EducationCard";
 
-const Background = () => {
+const BackgroundSection = () => {
   const [activeTab, setActiveTab] = useState("Experience");
 
   return (
@@ -68,4 +68,4 @@ const Background = () => {
   );
 };
 
-export default Background;
+export default BackgroundSection;

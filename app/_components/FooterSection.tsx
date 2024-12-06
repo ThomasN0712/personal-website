@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Linkedin, Mail } from "lucide-react";
 import Image from "next/image";
 
-const Footer = () => {
+const FooterSection = () => {
   return (
     <div>
       <div className="mt-16 p-10 border-t border-dark-200 dark:border-white/10 flex flex-col md:flex-row justify-between items-center gap-10 md:gap-0">
@@ -108,4 +108,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default FooterSection;

@@ -12,14 +12,14 @@ interface ProjectProps {
   heading: string;
   subheading: string;
   description: string;
-  imageUrl: string;
+  images: string[];
   techStack: string[];
   liveDemoUrl: string;
   sourceCodeUrl: string;
 }
 
 const ProjectCard = ({ project }: { project: ProjectProps }) => {
-  const { id, heading, imageUrl, techStack } = project;
+  const { id, heading, images, techStack } = project;
 
   return (
     <motion.div
@@ -31,7 +31,12 @@ const ProjectCard = ({ project }: { project: ProjectProps }) => {
     >
       <Link href={`/work/${id}`} className="rounded-lg overflow-hidden block">
         <div className="relative w-full h-96">
-          <Image src={imageUrl} alt={heading} layout="fill" objectFit="cover" />
+          <Image
+            src={images[0]}
+            alt={heading}
+            layout="fill"
+            objectFit="cover"
+          />
         </div>
       </Link>
       <div className="flex-1">
