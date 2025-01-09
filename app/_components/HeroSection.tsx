@@ -33,8 +33,8 @@ const HeroSection = () => {
             className="text-[40px] md:text-6xl lg:text-7xl font-bold text-center max-w-5xl leading-snug tracking-wide waving-hand"
           />
           <p className="pt-5 pb-10 text-lg sm:text-base md:text-lg text-dark-200 dark:text-stone-200">
-            I&apos;m a Computer Science student, soon will graduate and are
-            actively looking for a job.
+            Recent Computer Science 2024 graduate, software engineer intern,
+            actively seeking full-time opportunities.
           </p>
           <div className="flex flex-col sm:flex-row items-center gap-4">
             <ShinyButton icon={<ChevronRight />}>
