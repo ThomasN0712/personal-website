@@ -58,6 +58,18 @@ export interface Testimonial {
 export const experienceData: Experience[] = [
   {
     id: 1,
+    company: "Unis",
+    logo: "/imgs/logos/unis-logo.png",
+    position: "AI Automation Specalist",
+    dates: "Jan 2025 - Present",
+    description: [
+      "Developed AI automation with Python and JavaScript, optimizing logistics and replacing manual processes.",
+      "Built AI-powered agents using NLP, improving customer support and automating responses.",
+      "Implemented RPA solutions, integrating AI/ML models to enhance operations and efficiency",
+    ],
+  },
+  {
+    id: 2,
     company: "Archi Studies",
     logo: "/imgs/logos/archi-logo.svg",
     position: "Software Developer Intern",
@@ -69,11 +81,11 @@ export const experienceData: Experience[] = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     company: "Cal State Long Beach",
     logo: "/imgs/logos/csulb-logo.svg",
     position: "Teaching Assistant",
-    dates: "Jul 2023 - Present",
+    dates: "Jul 2023 - Dec 2024",
     description: [
       "Developed and deployed machine learning models for side-channel analysis, achieving a 98% accuracy rate in detecting Hardware Trojan attacks.",
       "Analyzed Large Language Models (LLMs) such as ChatGPT and Google Gemini for applications in Computer Science and Cybersecurity education, leading to a conference publication.",
@@ -81,7 +93,7 @@ export const experienceData: Experience[] = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     company: "Office of Research Development at CSULB",
     logo: "/imgs/logos/csulb-logo.svg",
     position: "Research Assistant",
@@ -93,11 +105,11 @@ export const experienceData: Experience[] = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     company: "Team Disney Anaheim",
     logo: "/imgs/logos/disneyland-logo.svg",
     position: "Media Event Technical Intern",
-    dates: "May 2019 - September 2019",
+    dates: "May 2019 - Sep 2019",
     description: [
       "Assisted in coordinating media reporters, guests, and celebrities for Star Wars: Galaxy's Edge 2019 grand opening.",
       "Conducted research on potential media contacts and celebrities, assisting in maintaining a comprehensive database.",
@@ -105,11 +117,11 @@ export const experienceData: Experience[] = [
     ],
   },
   {
-    id: 5,
+    id: 6,
     company: "Au Lac Plant Base Cuisine",
     logo: "/imgs/logos/aulac-logo.svg",
     position: "Manager",
-    dates: "September 2020 - July 2024",
+    dates: "Sep 2020 - Jul 2024",
     description: [
       "Improved performance of floor staff by supporting front and back team communication, allowing the kitchen team to halves ticket reading time.",
       "Developed a new program for writing and calculating cash reports, payroll and tip distribution.",
@@ -298,10 +310,10 @@ export const techCardsItems: TechCardItem[] = [
     darkModeInvert: true, // Invert in dark mode
   },
   {
-    id: 5,
+    id: 4,
     name: "DeepSeek",
     imageUrl: "/imgs/logos/deepseek.svg",
-    darkModeInvert: false, // Invert in dark mode
+    darkModeInvert: false,
   },
 ];
 
