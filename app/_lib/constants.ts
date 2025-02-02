@@ -297,6 +297,12 @@ export const techCardsItems: TechCardItem[] = [
     imageUrl: "/imgs/logos/chatgpt.svg",
     darkModeInvert: true, // Invert in dark mode
   },
+  {
+    id: 5,
+    name: "DeepSeek",
+    imageUrl: "/imgs/logos/deepseek.svg",
+    darkModeInvert: false, // Invert in dark mode
+  },
 ];
 
 export const portfolioProjects: PortfolioProject[] = [
