@@ -325,7 +325,7 @@ export const researchPapers: ResearchPaper[] = [
     publicationDate: "2024",
     conference: "IEEE Frontiers in Education Conference",
     imageUrl: "/imgs/projects/chatgpt-gemini-research-paper.png",
-    link: "https://example.com/paper1",
+    link: "https://ieeexplore.ieee.org/abstract/document/10893499",
   },
   {
     id: "2",
