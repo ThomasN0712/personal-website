@@ -1,13 +1,13 @@
 import Link from "next/link";
 import { portfolioProjects, researchPapers } from "@/app/_lib/constants";
-import ProjectCard from "./ProjectCard";
-import ResearchCard from "./ResearchCard";
+import ProjectCard from "./Card/ProjectCard";
+import ResearchCard from "./Card/ResearchCard";
 import ShinyButton from "./ui/ShinyButton";
 import { ChevronRight } from "lucide-react";
 
 const ProjectsSection = () => {
   return (
-    <div className="py-32" id="work">
+    <div className="py-16" id="work">
       <div className="flex gap-4 flex-col sm:flex-row sm:items-center justify-between">
         <h2 className="text-3xl min-[430px]:text-4xl md:text-5xl font-bold dark:text-stone-200">
           My portfolio

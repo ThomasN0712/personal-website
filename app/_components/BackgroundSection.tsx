@@ -1,30 +1,17 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "framer-motion";
 import { experienceData, educationData } from "@/app/_lib/constants";
-import ExperienceCard from "./ExperienceCard";
-import EducationCard from "./EducationCard";
+import ExperienceCard from "./Card/ExperienceCard";
+import EducationCard from "./Card/EducationCard";
 
-const Background = () => {
+const BackgroundSection = () => {
   const [activeTab, setActiveTab] = useState("Experience");
 
   return (
-    <div className="relative z-10 py-16 sm:py-24" id="about">
-      {/* <div className="space-y-4 mb-10">
-        <motion.h1
-          initial={{ opacity: 0, x: -75 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.25 }}
-          className="text-3xl min-[430px]:text-4xl md:text-5xl font-bold dark:text-stone-200"
-        >
-          Experience / Education
-        </motion.h1>
-      </div> */}
-
+    <div className="relative z-10" id="about">
       <div className="flex space-x-4 mb-8 justify-center">
-        <div className="relative w-full max-w-lg mt-6">
+        <div className="relative w-full max-w-lg">
           <div className="flex bg-gray-400 dark:bg-gray-800 rounded-lg overflow-hidden">
             {/* Slider Indicator */}
             <div
@@ -65,19 +52,13 @@ const Background = () => {
         <div className="ml-12 space-y-8">
           {activeTab === "Experience" &&
             experienceData.map((experience) => (
-              <div
-                key={experience.id}
-                className="transform md:transition-transform md:duration-300 md:hover:scale-105"
-              >
+              <div key={experience.id}>
                 <ExperienceCard experience={experience} />
               </div>
             ))}
           {activeTab === "Education" &&
             educationData.map((education) => (
-              <div
-                key={education.id}
-                className="transform md:transition-transform md:duration-300 md:hover:scale-105"
-              >
+              <div key={education.id}>
                 <EducationCard education={education} />
               </div>
             ))}
@@ -87,4 +68,4 @@ const Background = () => {
   );
 };
 
-export default Background;
+export default BackgroundSection;

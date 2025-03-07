@@ -30,7 +30,7 @@ export interface PortfolioProject {
   heading: string;
   subheading: string;
   description: string;
-  imageUrl: string;
+  images: string[];
   techStack: string[];
   liveDemoUrl: string;
   sourceCodeUrl: string;
@@ -58,10 +58,34 @@ export interface Testimonial {
 export const experienceData: Experience[] = [
   {
     id: 1,
+    company: "Unis",
+    logo: "/imgs/logos/unis-logo.png",
+    position: "AI Automation Specalist",
+    dates: "Jan 2025 - Present",
+    description: [
+      "Developed AI automation with Python and JavaScript, optimizing logistics and replacing manual processes.",
+      "Built AI-powered agents using NLP, improving customer support and automating responses.",
+      "Implemented RPA solutions, integrating AI/ML models to enhance operations and efficiency",
+    ],
+  },
+  {
+    id: 2,
+    company: "Archi Studies",
+    logo: "/imgs/logos/archi-logo.svg",
+    position: "Software Developer Intern",
+    dates: "Oct 2024 - Present",
+    description: [
+      "Engineered a responsive front-end using React, JavaScript, and CSS for seamless cross-device user experience.",
+      "Designed dynamic interfaces with interactive components and animations to enhance engagement.",
+      "Collaborated with the team to ensure seamless integration and functionality across all platform components.",
+    ],
+  },
+  {
+    id: 3,
     company: "Cal State Long Beach",
     logo: "/imgs/logos/csulb-logo.svg",
     position: "Teaching Assistant",
-    dates: "Jul 2023 - Present",
+    dates: "Jul 2023 - Dec 2024",
     description: [
       "Developed and deployed machine learning models for side-channel analysis, achieving a 98% accuracy rate in detecting Hardware Trojan attacks.",
       "Analyzed Large Language Models (LLMs) such as ChatGPT and Google Gemini for applications in Computer Science and Cybersecurity education, leading to a conference publication.",
@@ -69,7 +93,7 @@ export const experienceData: Experience[] = [
     ],
   },
   {
-    id: 2,
+    id: 4,
     company: "Office of Research Development at CSULB",
     logo: "/imgs/logos/csulb-logo.svg",
     position: "Research Assistant",
@@ -81,11 +105,11 @@ export const experienceData: Experience[] = [
     ],
   },
   {
-    id: 3,
+    id: 5,
     company: "Team Disney Anaheim",
     logo: "/imgs/logos/disneyland-logo.svg",
     position: "Media Event Technical Intern",
-    dates: "May 2019 - September 2019",
+    dates: "May 2019 - Sep 2019",
     description: [
       "Assisted in coordinating media reporters, guests, and celebrities for Star Wars: Galaxy's Edge 2019 grand opening.",
       "Conducted research on potential media contacts and celebrities, assisting in maintaining a comprehensive database.",
@@ -93,11 +117,11 @@ export const experienceData: Experience[] = [
     ],
   },
   {
-    id: 4,
+    id: 6,
     company: "Au Lac Plant Base Cuisine",
     logo: "/imgs/logos/aulac-logo.svg",
     position: "Manager",
-    dates: "September 2020 - July 2024",
+    dates: "Sep 2020 - Jul 2024",
     description: [
       "Improved performance of floor staff by supporting front and back team communication, allowing the kitchen team to halves ticket reading time.",
       "Developed a new program for writing and calculating cash reports, payroll and tip distribution.",
@@ -163,6 +187,12 @@ export const techCardsItems: TechCardItem[] = [
     id: 1,
     name: "Java",
     imageUrl: "/imgs/logos/java.svg",
+    darkModeInvert: false,
+  },
+  {
+    id: 1,
+    name: "PostgreSQL",
+    imageUrl: "/imgs/logos/postgresql.svg",
     darkModeInvert: false,
   },
   {
@@ -247,24 +277,24 @@ export const techCardsItems: TechCardItem[] = [
     imageUrl: "/imgs/logos/vercel.svg",
     darkModeInvert: true, // Invert in dark mode
   },
+  {
+    id: 3,
+    name: "Supabase",
+    imageUrl: "/imgs/logos/supabase.svg",
+    darkModeInvert: false,
+  },
+  {
+    id: 3,
+    name: "Render",
+    imageUrl: "/imgs/logos/render.svg",
+    darkModeInvert: true,
+  },
 
   // Other
   {
     id: 4,
-    name: "Slack",
-    imageUrl: "/imgs/logos/slack.svg",
-    darkModeInvert: false,
-  },
-  {
-    id: 4,
     name: "Jira",
     imageUrl: "/imgs/logos/jira.svg",
-    darkModeInvert: false,
-  },
-  {
-    id: 4,
-    name: "Workspace",
-    imageUrl: "/imgs/logos/google-workspace.svg",
     darkModeInvert: false,
   },
   {
@@ -279,6 +309,12 @@ export const techCardsItems: TechCardItem[] = [
     imageUrl: "/imgs/logos/chatgpt.svg",
     darkModeInvert: true, // Invert in dark mode
   },
+  {
+    id: 4,
+    name: "DeepSeek",
+    imageUrl: "/imgs/logos/deepseek.svg",
+    darkModeInvert: false,
+  },
 ];
 
 export const portfolioProjects: PortfolioProject[] = [
@@ -288,7 +324,12 @@ export const portfolioProjects: PortfolioProject[] = [
     subheading: "a snap-chat clone + E2EE",
     description:
       "A responsive, high-performance web application built with a modern tech stack. The frontend, developed using React, Vite, and styled with SCSS, provides an interactive and visually appealing user experience. The backend is powered by Golang, MongoDB, and Redis, ensuring efficient data management and fast server-side processing. With Ionic and Capacitor, the app offers seamless functionality across web and mobile platforms.",
-    imageUrl: "/imgs/projects/portfolio-wraith.png",
+    images: [
+      "/imgs/projects/portfolio-wraith.png",
+      "/imgs/projects/portfolio-wraith-2.png",
+      "/imgs/projects/portfolio-wraith-3.png",
+      "/imgs/projects/portfolio-wraith-4.png",
+    ],
     techStack: [
       "React",
       "Golang",
@@ -304,14 +345,45 @@ export const portfolioProjects: PortfolioProject[] = [
     sourceCodeUrl: "not-found",
   },
   {
+    id: "dining-hall-menu",
+    heading: "Dining Hall Menu Web App",
+    subheading: "A better dining experience for students",
+    description:
+      "A responsive web application built with Next.js, TypeScript, and Tailwind CSS for dining menu display and allergen filtering. The backend is serverless, developed with FastAPI, PostgreSQL, and hosted on Vercel with Supabase integration. Features include email notifications, daily menu updates, and community ratings to enhance the user experience.",
+    images: ["/imgs/projects/portfolio-dining-hall-menu.png"],
+    techStack: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "FastAPI",
+      "PostgreSQL",
+      "Vercel",
+      "Supabase",
+      "Render",
+    ],
+    liveDemoUrl: "https://www.longbeachmenu.com/",
+    sourceCodeUrl: "https://github.com/ThomasN0712/better-dining-hall-menu",
+  },
+  {
+    id: "archi-studies",
+    heading: "Archi Studies",
+    subheading: "Empowering students through collaborative learning",
+    description:
+      "Developed a responsive front-end using React, JavaScript, and CSS for seamless cross-device experiences. Designed dynamic interfaces with animations and interactive components to boost engagement. Collaborated with the team to integrate features and ensure cross-platform functionality.",
+    images: ["/imgs/projects/portfolio-archi-studies.png"],
+    techStack: ["React", "JavaScript", "CSS", "Docker", "MongoDB"],
+    liveDemoUrl: "https://archistudies.com/app",
+    sourceCodeUrl: "not-found",
+  },
+  {
     id: "personal-website",
     heading: "Personal Website",
     subheading: "A showcase of my projects and skills",
     description:
       "This personal website was built using modern web technologies to create a responsive, clean, and efficient user experience. Developed with Next.js and React, styled using Tailwind CSS, and enhanced with TypeScript for type safety, this site demonstrates my skills in building functional and visually appealing web applications.",
-    imageUrl: "/imgs/projects/portfolio-personal-website.png",
+    images: ["/imgs/projects/portfolio-personal-website.png"],
     techStack: ["Next.js", "React", "Tailwind CSS", "TypeScript", "Vercel"],
-    liveDemoUrl: "not-found",
+    liveDemoUrl: "https://www.thomasnguyen.tech/",
     sourceCodeUrl: "not-found",
   },
 ];
@@ -338,27 +410,9 @@ export const researchPapers: ResearchPaper[] = [
     imageUrl: "/imgs/projects/ai-companion-research-paper.png",
     link: "https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=10578820",
   },
-  // {
-  //   id: "3",
-  //   title: "Bayesian Networks for Predictive Analysis in Healthcare",
-  //   description:
-  //     "This paper presents the application of Bayesian networks to predict patient outcomes, focusing on probabilistic modeling in health informatics to assist in clinical decision-making.",
-  //   authors: "Thomas Nguyen, Emily Zhang",
-  //   publicationDate: "2024",
-  //   imageUrl: "/images/bayesian-healthcare.jpg",
-  //   link: "https://example.com/paper3",
-  // },
 ];
 
 export const testimonialItems = [
-  {
-    id: 2,
-    name: "Dr. Hossein Sayadi",
-    proffesion: "Professor at Cal State Long Beach",
-    description:
-      "“Lorem ipsum odor amet, consectetuer adipiscing elit. Habitasse nullam nullam mauris hendrerit viverra donec parturient fames? Habitasse neque nec viverra lobortis tincidunt morbi. Pulvinar ligula euismod tempus lacinia habitasse ligula platea etiam. Tempor imperdiet bibendum inceptos pellentesque luctus per mi blandit. Congue potenti fusce praesent, erat a habitant erat eget. Tempor pretium malesuada nibh habitant finibus sollicitudin primis. Luctus litora accumsan venenatis nisi et egestas.”",
-    image: "/imgs/avatars/default-avatar.jpg",
-  },
   {
     id: 1,
     name: "Michael Glider",
@@ -369,7 +423,7 @@ export const testimonialItems = [
     image: "/imgs/avatars/Michael-Glider-avatar.jpeg",
   },
   {
-    id: 1,
+    id: 2,
     name: "William Tran",
     proffesion: "Bussiness Analyst @ The Lab Consulting",
     description:

@@ -6,11 +6,11 @@ import {
 } from "lucide-react";
 import { Navbar } from "@/app/_components/ui/Navbar";
 import HeroSection from "@/app/_components/HeroSection";
-import Skills from "@/app/_components/Skills";
-import Background from "@/app/_components/Background";
+import SkillsSection from "@/app/_components/SkillsSection";
+import BackgroundSection from "@/app/_components/BackgroundSection";
 import ProjectsSection from "@/app/_components/ProjectsSection";
-import Testimonials from "@/app/_components/Testimonials";
-import Footer from "@/app/_components/Footer";
+import TestimonialsSection from "@/app/_components/TestimonialsSection";
+import FooterSection from "@/app/_components/FooterSection";
 
 const navItems = [
   { name: "Home", link: "#home", icon: <House /> },
@@ -24,11 +24,11 @@ const Homepage = () => {
       <div className="max-w-7xl mx-auto w-full">
         <Navbar navItems={navItems} />
         <HeroSection />
-        <Background />
-        <Skills />
+        <BackgroundSection />
+        <SkillsSection />
         <ProjectsSection />
-        <Testimonials />
-        <Footer />
+        <TestimonialsSection />
+        <FooterSection />
       </div>
     </main>
   );

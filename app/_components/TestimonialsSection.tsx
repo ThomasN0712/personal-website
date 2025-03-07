@@ -1,13 +1,13 @@
 "use client";
 
-import AnimatedParagraph from "@/app/_components/AnimatedParagraph";
+import AnimatedParagraph from "@/app/_components/ui/AnimatedParagraph";
 import { testimonialItems } from "@/app/_lib/constants";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 
-const Testimonials = () => {
+const TestimonialsSection = () => {
   const [curIndex, setCurIndex] = useState(0);
   const { ref, inView } = useInView({
     triggerOnce: false,
@@ -86,4 +86,4 @@ const Testimonials = () => {
   );
 };
 
-export default Testimonials;
+export default TestimonialsSection;

@@ -12,14 +12,14 @@ interface ProjectProps {
   heading: string;
   subheading: string;
   description: string;
-  imageUrl: string;
+  images: string[];
   techStack: string[];
   liveDemoUrl: string;
   sourceCodeUrl: string;
 }
 
 const ProjectCard = ({ project }: { project: ProjectProps }) => {
-  const { id, heading, imageUrl, techStack } = project;
+  const { id, heading, images, techStack } = project;
 
   return (
     <motion.div
@@ -27,16 +27,17 @@ const ProjectCard = ({ project }: { project: ProjectProps }) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: 0.25 }}
-      className="bg-[#F3F4F3] dark:bg-dark-200 rounded-lg p-4 sm:p-8 space-y-8 relative flex flex-col"
+      className="bg-[#F3F4F3] dark:bg-dark-200 rounded-lg p-4 sm:p-8 space-y-8 relative flex flex-col hover:shadow-md hover:dark:shadow-primary hover:shadow-slate-600"
     >
       <Link href={`/work/${id}`} className="rounded-lg overflow-hidden block">
-        <Image
-          src={imageUrl}
-          width={1000}
-          height={1000}
-          alt={heading}
-          className="hover:scale-110 transition-transform duration-700"
-        />
+        <div className="relative w-full h-96">
+          <Image
+            src={images[0]}
+            alt={heading}
+            layout="fill"
+            objectFit="cover"
+          />
+        </div>
       </Link>
       <div className="flex-1">
         <h3 className="text-2xl sm:text-3xl font-semibold">{heading}</h3>

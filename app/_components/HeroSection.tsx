@@ -3,12 +3,20 @@ import "@/app/_styles/globals.css";
 import ShinyButton from "./ui/ShinyButton";
 import Link from "next/link";
 import { TextGenerateEffect } from "./ui/TextGenerate";
+import Particles from "./ui/Particles";
 
 const HeroSection = () => {
   return (
     <>
       <div className="h-screen w-full dark:bg-dark-100 bg-white dark:bg-grid-white/[0.04] bg-grid-black/[0.06] flex items-center justify-center absolute top-0 left-0">
         {/* Radial gradient for the container to give a faded look */}
+        <Particles
+          className="absolute inset-0"
+          quantity={100}
+          ease={80}
+          color={"#ffffff"}
+          refresh
+        />
         <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-dark-100 bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]" />
       </div>
 
@@ -25,12 +33,12 @@ const HeroSection = () => {
             className="text-[40px] md:text-6xl lg:text-7xl font-bold text-center max-w-5xl leading-snug tracking-wide waving-hand"
           />
           <p className="pt-5 pb-10 text-lg sm:text-base md:text-lg text-dark-200 dark:text-stone-200">
-            I&apos;m a Computer Science student, soon will graduate and are
-            actively looking for a job.
+            Recent Computer Science 2024 graduate, software engineer intern,
+            actively seeking full-time opportunities.
           </p>
           <div className="flex flex-col sm:flex-row items-center gap-4">
-            <ShinyButton icon={<ChevronRight />}>
-              <Link href="#work">See My Work</Link>
+            <ShinyButton as="a" href="#work" icon={<ChevronRight />}>
+              See My Work
             </ShinyButton>
             <a
               href="/resume/Thomas_resume.pdf"
