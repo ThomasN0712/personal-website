@@ -10,6 +10,7 @@ import SkillsSection from "@/app/_components/SkillsSection";
 import BackgroundSection from "@/app/_components/BackgroundSection";
 import ProjectsSection from "@/app/_components/ProjectsSection";
 import TestimonialsSection from "@/app/_components/TestimonialsSection";
+import DodgersSection from "@/app/_components/DodgersSection";
 import FooterSection from "@/app/_components/FooterSection";
 
 const navItems = [
@@ -28,6 +29,7 @@ const Homepage = () => {
         <SkillsSection />
         <ProjectsSection />
         <TestimonialsSection />
+        <DodgersSection />
         <FooterSection />
       </div>
     </main>
